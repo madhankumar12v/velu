@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Velu Memorial Social Trust</title>
 
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <style>
+
+/* =========================================
+   BASIC SETTINGS
+========================================= */
 
 *{
     margin:0;
@@ -25,7 +37,10 @@ body{
     color:#222;
 }
 
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
 
 header{
     position:sticky;
@@ -38,11 +53,16 @@ header{
 .navbar{
     max-width:1200px;
     margin:auto;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 20px;
+
+    padding:12px 20px;
 }
+
+
+/* LOGO */
 
 .logo{
     display:flex;
@@ -53,6 +73,7 @@ header{
 .logo img{
     width:55px;
     height:55px;
+    object-fit:contain;
 }
 
 .logo-text h2{
@@ -65,6 +86,9 @@ header{
     font-size:12px;
 }
 
+
+/* NAVIGATION */
+
 nav ul{
     display:flex;
     list-style:none;
@@ -75,18 +99,70 @@ nav a{
     text-decoration:none;
     color:#004aad;
     font-weight:600;
+    transition:.3s;
 }
 
-/* HERO */
+nav a:hover{
+    color:#28a36a;
+}
+
+
+/* =========================================
+   BANNER
+========================================= */
+
+.banner-section{
+    width:100%;
+    background:#ffffff;
+    padding:20px 20px 0;
+}
+
+.banner-container{
+    max-width:1200px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+}
+
+
+/*
+   BANNER RATIO = 6:3
+
+   Width : 6
+   Height: 3
+
+   You can replace banner.jpg later.
+*/
+
+.banner-container img{
+    width:100%;
+    aspect-ratio:6 / 3;
+    object-fit:cover;
+    display:block;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero{
-    min-height:85vh;
+    min-height:70vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     text-align:center;
-    padding:60px 20px;
-    background:linear-gradient(to bottom,#f6fbff,#ffffff);
+
+    padding:70px 20px;
+
+    background:linear-gradient(
+        to bottom,
+        #f6fbff,
+        #ffffff
+    );
 }
 
 .hero-content{
@@ -119,18 +195,37 @@ nav a{
     font-weight:500;
 }
 
+
+/* BUTTON */
+
 .btn{
     display:inline-block;
+
     margin-top:35px;
+
     background:#004aad;
     color:white;
+
     padding:14px 28px;
+
     border-radius:8px;
+
     text-decoration:none;
+
     font-weight:600;
+
+    transition:.3s;
 }
 
-/* SECTION */
+.btn:hover{
+    background:#28a36a;
+    transform:translateY(-2px);
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
 
 section{
     padding:80px 20px;
@@ -143,12 +238,18 @@ section{
 
 .section-title{
     text-align:center;
+
     color:#004aad;
+
     margin-bottom:40px;
+
     font-size:38px;
 }
 
-/* ABOUT */
+
+/* =========================================
+   ABOUT
+========================================= */
 
 .about{
     background:white;
@@ -156,49 +257,102 @@ section{
 
 .about p{
     text-align:center;
+
     max-width:900px;
+
     margin:auto;
+
     line-height:1.9;
+
     color:#555;
+
+    font-size:16px;
 }
 
-/* VALUES */
+
+/* =========================================
+   VALUES
+========================================= */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
     gap:25px;
 }
 
 .card{
     background:white;
+
     padding:30px;
+
     border-radius:15px;
+
     text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.06);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 12px 25px rgba(0,0,0,.10);
 }
 
 .card h3{
     color:#28a36a;
+
     margin-bottom:10px;
+
+    font-size:22px;
 }
 
-/* GALLERY */
+.card p{
+    color:#555;
+
+    line-height:1.7;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
     gap:20px;
 }
 
 .gallery img{
     width:100%;
+
     height:250px;
+
     object-fit:cover;
+
     border-radius:12px;
+
+    transition:.3s;
 }
 
-/* VOLUNTEER */
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+
+/* =========================================
+   VOLUNTEER
+========================================= */
 
 .volunteer{
     background:white;
@@ -206,284 +360,1101 @@ section{
 
 form{
     max-width:700px;
+
     margin:auto;
 }
 
 input,
 textarea{
+
     width:100%;
+
     padding:15px;
+
     margin-bottom:15px;
+
     border:1px solid #ddd;
+
     border-radius:8px;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:15px;
 }
+
+input:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:#004aad;
+
+    box-shadow:
+    0 0 5px rgba(0,74,173,.15);
+}
+
+
+/* SUBMIT BUTTON */
 
 button{
+
     background:#28a36a;
+
     color:white;
+
     border:none;
+
     padding:14px 28px;
+
     border-radius:8px;
+
     cursor:pointer;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
 }
 
-/* CONTACT */
+button:hover{
+
+    background:#004aad;
+
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
 
 .contact-box{
+
     text-align:center;
+
     line-height:2;
+
+    font-size:17px;
 }
+
+
+/* =========================================
+   SOCIAL MEDIA
+========================================= */
 
 .socials{
-    margin-top:20px;
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
 }
+
+
+/* SOCIAL ICON BUTTON */
 
 .socials a{
+
+    width:50px;
+
+    height:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#004aad;
+
+    color:white;
+
     text-decoration:none;
-    color:#004aad;
-    margin:0 10px;
-    font-weight:600;
+
+    font-size:22px;
+
+    transition:.3s;
 }
 
-/* FOOTER */
+
+/* FACEBOOK */
+
+.socials a.facebook{
+    background:#1877F2;
+}
+
+
+/* INSTAGRAM */
+
+.socials a.instagram{
+
+    background:
+    linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+}
+
+
+/* YOUTUBE */
+
+.socials a.youtube{
+    background:#FF0000;
+}
+
+
+/* HOVER */
+
+.socials a:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.08);
+
+    box-shadow:
+    0 8px 18px rgba(0,0,0,.20);
+}
+
+
+/* SOCIAL MEDIA LABEL */
+
+.social-text{
+
+    margin-top:15px;
+
+    color:#777;
+
+    font-size:14px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer{
+
     background:#003b8e;
+
     color:white;
+
     text-align:center;
+
     padding:40px 20px;
 }
 
 footer h3{
+
     margin-bottom:10px;
-}
 
-footer p{
-    margin:5px 0;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-    font-size:42px;
-}
-
-.hero-top{
-    font-size:20px;
-}
-
-.hero h3{
     font-size:22px;
 }
 
-.hero p{
-    font-size:18px;
+footer p{
+
+    margin:5px 0;
+
+    font-size:14px;
 }
 
-nav{
-    display:none;
+
+/* =========================================
+   FOOTER SOCIAL ICONS
+========================================= */
+
+.footer-socials{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
 }
+
+.footer-socials a{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#003b8e;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.footer-socials a:hover{
+
+    transform:
+    translateY(-4px);
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    /* HEADER */
+
+    .navbar{
+
+        padding:10px 15px;
+
+    }
+
+    .logo img{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
+    .logo-text h2{
+
+        font-size:15px;
+
+    }
+
+    .logo-text p{
+
+        font-size:9px;
+
+    }
+
+
+    /* NAVIGATION */
+
+    nav{
+
+        display:none;
+
+    }
+
+
+    /* BANNER */
+
+    .banner-section{
+
+        padding:
+        10px 10px 0;
+
+    }
+
+    .banner-container{
+
+        border-radius:10px;
+
+    }
+
+
+    /* HERO */
+
+    .hero{
+
+        min-height:65vh;
+
+        padding:
+        60px 20px;
+
+    }
+
+    .hero-top{
+
+        font-size:20px;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+    }
+
+    .hero h3{
+
+        font-size:22px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+
+    /* SECTIONS */
+
+    section{
+
+        padding:
+        60px 20px;
+
+    }
+
+    .section-title{
+
+        font-size:30px;
+
+    }
+
+
+    /* GALLERY */
+
+    .gallery{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap:10px;
+
+    }
+
+    .gallery img{
+
+        height:180px;
+
+    }
+
+
+    /* SOCIAL */
+
+    .socials a{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+    .logo-text h2{
+
+        font-size:13px;
+
+    }
+
+    .logo-text p{
+
+        font-size:8px;
+
+    }
+
+    .hero h1{
+
+        font-size:36px;
+
+    }
+
+    .hero-top{
+
+        font-size:18px;
+
+    }
+
+    .hero h3{
+
+        font-size:20px;
+
+    }
+
+    .section-title{
+
+        font-size:28px;
+
+    }
+
+    .gallery{
+
+        grid-template-columns:
+        1fr;
+
+    }
+
+    .gallery img{
+
+        height:230px;
+
+    }
 
 }
 
 </style>
+
 </head>
+
+
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
 <header>
+
 <div class="navbar">
 
-<div class="logo">
-<img src="Velu.png" alt="Logo">
-<div class="logo-text">
-<h2>Velu Memorial Social Trust</h2>
-<p>Serving Society with Love & Legacy</p>
-</div>
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <img
+        src="Velu.png"
+        alt="Velu Memorial Social Trust Logo"
+        >
+
+        <div class="logo-text">
+
+            <h2>
+                Velu Memorial Social Trust
+            </h2>
+
+            <p>
+                Serving Society with Love & Legacy
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#values">
+                    Values
+                </a>
+            </li>
+
+            <li>
+                <a href="#gallery">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="#volunteer">
+                    Volunteer
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
 </div>
 
-<nav>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#values">Values</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#volunteer">Volunteer</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-
-</div>
 </header>
+
+
+
+<!-- =========================================
+     BANNER
+========================================= -->
+
+<section class="banner-section">
+
+<div class="banner-container">
+
+    <!--
+        YOUR BANNER IMAGE
+
+        Upload your 6:3 banner
+        and name it:
+
+        banner.jpg
+    -->
+
+    <img
+    src="banner.jpg"
+    alt="Velu Memorial Social Trust Banner"
+    >
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<div class="hero-top">
-🌿 Legacy • Unity • Growth 🌿
-</div>
 
-<h1>
-Velu Memorial<br>
-Social Trust
-</h1>
+    <div class="hero-top">
 
-<h3>
-Serving Society with Love & Legacy
-</h3>
+        🌿 Legacy • Unity • Growth 🌿
 
-<p>
-His Values. Our Mission.
-</p>
+    </div>
 
-<a href="#contact" class="btn">
-Contact Us
-</a>
+
+    <h1>
+
+        Velu Memorial<br>
+
+        Social Trust
+
+    </h1>
+
+
+    <h3>
+
+        Serving Society with Love & Legacy
+
+    </h3>
+
+
+    <p>
+
+        His Values. Our Mission.
+
+    </p>
+
+
+    <a
+    href="#contact"
+    class="btn"
+    >
+
+        Contact Us
+
+    </a>
+
 
 </div>
 
 </section>
 
-<section id="about" class="about">
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section
+id="about"
+class="about"
+>
 
 <div class="container">
 
-<h2 class="section-title">
-About Us
-</h2>
 
-<p>
-Velu Memorial Social Trust was established on 21 October 2025 with a vision of bringing people together through compassion, unity and positive social impact. Inspired by enduring values and community spirit, the trust strives to create opportunities that encourage participation, growth and meaningful contributions to society.
-</p>
+    <h2 class="section-title">
+
+        About Us
+
+    </h2>
+
+
+    <p>
+
+        Velu Memorial Social Trust was established
+        on 21 October 2025 with a vision of bringing
+        people together through compassion, unity
+        and positive social impact.
+
+        Inspired by enduring values and community
+        spirit, the trust strives to create opportunities
+        that encourage participation, growth and
+        meaningful contributions to society.
+
+    </p>
+
 
 </div>
 
 </section>
+
+
+
+<!-- =========================================
+     VALUES
+========================================= -->
 
 <section id="values">
 
 <div class="container">
 
-<h2 class="section-title">
-Our Core Values
-</h2>
 
-<div class="cards">
+    <h2 class="section-title">
 
-<div class="card">
-<h3>Legacy</h3>
-<p>Honouring values that inspire future generations.</p>
-</div>
+        Our Core Values
 
-<div class="card">
-<h3>Unity</h3>
-<p>Bringing people together for a stronger community.</p>
-</div>
+    </h2>
 
-<div class="card">
-<h3>Growth</h3>
-<p>Creating opportunities for positive change and development.</p>
-</div>
 
-</div>
+    <div class="cards">
+
+
+        <!-- LEGACY -->
+
+        <div class="card">
+
+            <h3>
+                Legacy
+            </h3>
+
+            <p>
+
+                Honouring values that inspire
+                future generations.
+
+            </p>
+
+        </div>
+
+
+        <!-- UNITY -->
+
+        <div class="card">
+
+            <h3>
+                Unity
+            </h3>
+
+            <p>
+
+                Bringing people together for
+                a stronger community.
+
+            </p>
+
+        </div>
+
+
+        <!-- GROWTH -->
+
+        <div class="card">
+
+            <h3>
+                Growth
+            </h3>
+
+            <p>
+
+                Creating opportunities for
+                positive change and development.
+
+            </p>
+
+        </div>
+
+
+    </div>
 
 </div>
 
 </section>
+
+
+
+<!-- =========================================
+     GALLERY
+========================================= -->
 
 <section id="gallery">
 
 <div class="container">
 
-<h2 class="section-title">
-Gallery
-</h2>
 
-<div class="gallery">
+    <h2 class="section-title">
 
-<img src="gallery1.jpg">
-<img src="gallery2.jpg">
-<img src="gallery3.jpg">
-<img src="gallery4.jpg">
+        Gallery
 
-</div>
+    </h2>
+
+
+    <div class="gallery">
+
+
+        <img
+        src="gallery1.jpg"
+        alt="Velu Memorial Social Trust Activity 1"
+        >
+
+
+        <img
+        src="gallery2.jpg"
+        alt="Velu Memorial Social Trust Activity 2"
+        >
+
+
+        <img
+        src="gallery3.jpg"
+        alt="Velu Memorial Social Trust Activity 3"
+        >
+
+
+        <img
+        src="gallery4.jpg"
+        alt="Velu Memorial Social Trust Activity 4"
+        >
+
+
+    </div>
 
 </div>
 
 </section>
 
-<section id="volunteer" class="volunteer">
+
+
+<!-- =========================================
+     VOLUNTEER
+========================================= -->
+
+<section
+id="volunteer"
+class="volunteer"
+>
 
 <div class="container">
 
-<h2 class="section-title">
-Become a Volunteer
-</h2>
 
-<form>
+    <h2 class="section-title">
 
-<input type="text" placeholder="Full Name">
+        Become a Volunteer
 
-<input type="email" placeholder="Email Address">
+    </h2>
 
-<input type="tel" placeholder="Phone Number">
 
-<textarea rows="5" placeholder="Tell us about yourself"></textarea>
+    <form>
 
-<button type="submit">
-Submit
-</button>
 
-</form>
+        <input
+        type="text"
+        placeholder="Full Name"
+        required
+        >
+
+
+        <input
+        type="email"
+        placeholder="Email Address"
+        required
+        >
+
+
+        <input
+        type="tel"
+        placeholder="Phone Number"
+        required
+        >
+
+
+        <textarea
+        rows="5"
+        placeholder="Tell us about yourself"
+        ></textarea>
+
+
+        <button
+        type="submit"
+        >
+
+            Submit
+
+        </button>
+
+
+    </form>
 
 </div>
 
 </section>
+
+
+
+<!-- =========================================
+     CONTACT
+========================================= -->
 
 <section id="contact">
 
 <div class="container">
 
-<h2 class="section-title">
-Contact Us
-</h2>
 
-<div class="contact-box">
+    <h2 class="section-title">
 
-<p>📞 +91 8838037689</p>
+        Contact Us
 
-<p>📧 velumemorialsocialtrust@gmail.com</p>
+    </h2>
 
-<p>📍 Tamil Nadu, India</p>
 
-<div class="socials">
+    <div class="contact-box">
 
-<a href="https://www.facebook.com/profile.php?id=61582258115325&sk=followers">Facebook</a>
 
-<a href="https://www.instagram.com/velumemorialsocialtrust/">Instagram</a>
+        <!-- PHONE -->
 
-<a href="https://youtube.com/@velumemorialsocialtrust?si=9R9gyh6k0vOU_LTQ">YouTube</a>
+        <p>
 
-</div>
+            📞
+            <a
+            href="tel:+918838037689"
+            style="
+            color:#004aad;
+            text-decoration:none;
+            "
+            >
 
-</div>
+                +91 8838037689
+
+            </a>
+
+        </p>
+
+
+        <!-- EMAIL -->
+
+        <p>
+
+            📧
+            <a
+            href="mailto:velumemorialsocialtrust@gmail.com"
+            style="
+            color:#004aad;
+            text-decoration:none;
+            "
+            >
+
+                velumemorialsocialtrust@gmail.com
+
+            </a>
+
+        </p>
+
+
+        <!-- LOCATION -->
+
+        <p>
+
+            📍 Tamil Nadu, India
+
+        </p>
+
+
+
+        <!-- =================================
+             SOCIAL MEDIA
+        ================================== -->
+
+        <div class="socials">
+
+
+            <!-- FACEBOOK -->
+
+            <a
+            class="facebook"
+            href="https://www.facebook.com/profile.php?id=61582258115325&sk=followers"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            >
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+            class="instagram"
+            href="https://www.instagram.com/velumemorialsocialtrust/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            >
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </a>
+
+
+            <!-- YOUTUBE -->
+
+            <a
+            class="youtube"
+            href="https://youtube.com/@velumemorialsocialtrust?si=9R9gyh6k0vOU_LTQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            >
+
+                <i class="fa-brands fa-youtube"></i>
+
+            </a>
+
+
+        </div>
+
+
+        <p class="social-text">
+
+            Follow us on social media
+
+        </p>
+
+
+    </div>
 
 </div>
 
 </section>
 
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer>
 
-<h3>Velu Memorial Social Trust</h3>
 
-<p>Legacy • Unity • Growth</p>
+    <h3>
 
-<p>Serving Society with Love & Legacy</p>
+        Velu Memorial Social Trust
 
-<p>© 2026 All Rights Reserved</p>
+    </h3>
+
+
+    <p>
+
+        Legacy • Unity • Growth
+
+    </p>
+
+
+    <p>
+
+        Serving Society with Love & Legacy
+
+    </p>
+
+
+
+    <!-- FOOTER SOCIAL ICONS -->
+
+    <div class="footer-socials">
+
+
+        <a
+        href="https://www.facebook.com/profile.php?id=61582258115325&sk=followers"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        >
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+        </a>
+
+
+        <a
+        href="https://www.instagram.com/velumemorialsocialtrust/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        >
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+
+        <a
+        href="https://youtube.com/@velumemorialsocialtrust?si=9R9gyh6k0vOU_LTQ"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube"
+        >
+
+            <i class="fa-brands fa-youtube"></i>
+
+        </a>
+
+
+    </div>
+
+
+    <br>
+
+
+    <p>
+
+        © 2026 Velu Memorial Social Trust.
+        All Rights Reserved.
+
+    </p>
+
 
 </footer>
 
+
 </body>
+
 </html>
