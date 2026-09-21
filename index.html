@@ -1,245 +1,489 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Velu Memorial Social Trust — Serving Society with Love</title>
-  <meta name="description" content="Velu Memorial Social Trust — Helping people get Ayushman cards, spreading health & education awareness in memory of Late Mr. Velu." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --blue:#0b66c2;
-      --green:#28a36a;
-      --muted:#6b7280;
-      --bg:#f7fbfc;
-      --maxw:1100px;
-      --radius:12px;
-      --shadow:0 6px 20px rgba(8,20,40,0.04);
-      font-family: 'Inter', sans-serif;
-    }
-    *{box-sizing:border-box; margin:0; padding:0;}
-    body{background:linear-gradient(180deg,#f7fbfc 0%, #ffffff 100%); color:#0b2540; line-height:1.6; scroll-behavior:smooth;}
-    a{text-decoration:none;color:inherit;}
-    img{max-width:100%; display:block;}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px;}
-    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0;position:sticky;top:0;background:#fff;z-index:1000;box-shadow:0 2px 6px rgba(0,0,0,0.06);transition:all .3s;}
-    .brand{display:flex;align-items:center;gap:14px}
-    .brand img{width:64px;height:64px;border-radius:10px;object-fit:contain;transition:all .3s;}
-    .brand h1{font-size:20px;letter-spacing:0.2px;}
-    .tag{font-size:13px;color:var(--muted);}
-    nav{display:flex;gap:12px;}
-    nav a{color:var(--blue);padding:8px 12px;font-weight:600;border-radius:8px;transition:all .2s;}
-    nav a:hover{background:rgba(11,102,194,0.1);}
-    /* hero */
-    .hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin:36px 0;}
-    .hero-card{flex:1;min-width:300px;background:#fff;padding:28px;border-radius:var(--radius);box-shadow:var(--shadow);opacity:0;transform:translateY(30px);animation:fadeUp 1s forwards;}
-    .hero-card h2{font-size:28px;margin-bottom:12px;}
-    .hero-card p{color:var(--muted);margin-bottom:20px;}
-    .cta{display:flex;gap:12px;}
-    .btn{background:var(--blue);color:#fff;padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:700;transition:all .2s;}
-    .btn:hover{background:#094a92;}
-    .btn.alt{background:transparent;color:var(--blue);border:2px solid rgba(11,102,194,0.3);}
-    .btn.alt:hover{background:var(--blue);color:#fff;}
-    aside .card{margin-top:20px;background:#fff;padding:20px;border-radius:var(--radius);box-shadow:var(--shadow);opacity:0;transform:translateY(30px);animation:fadeUp 1s forwards;animation-delay:.2s;animation-fill-mode:both;}
-    /* sections */
-    section{margin-top:40px;opacity:0;transform:translateY(20px);animation:fadeUp 1s forwards;}
-    section h3{font-size:22px;margin-bottom:16px;color:var(--blue);}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
-    .service{background:#fff;padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);transition:all .3s;cursor:pointer;}
-    .service:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(8,20,40,0.1);}
-    .service h4{margin-bottom:6px;color:var(--green);}
-    .muted{color:var(--muted);}
-    /* education */
-    .education-list{display:flex;flex-direction:column;gap:12px;}
-    /* contact */
-    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px;}
-    .contact-card{padding:16px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);}
-    .form-row{display:flex;flex-direction:column;gap:6px;margin-bottom:10px;}
-    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6eef6;transition:all .2s;}
-    input:focus,textarea:focus{outline:none;border-color:var(--blue);}
-    /* footer */
-    footer{margin-top:40px;padding:16px 0;text-align:center;color:var(--muted);font-size:14px;}
-    /* modal */
-    .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.45);visibility:hidden;opacity:0;transition:all .18s;}
-    .modal.open{visibility:visible;opacity:1;}
-    .modal-card{background:#fff;padding:18px;border-radius:12px;max-width:420px;width:94%;}
-    .help-block{background:linear-gradient(90deg,var(--blue),var(--green));color:#fff;padding:8px 12px;border-radius:8px;margin-bottom:12px;}
-    /* responsive */
-    @media(max-width:900px){.hero{flex-direction:column}.contact-grid{grid-template-columns:1fr}}
-    @media(max-width:560px){nav{display:none}.brand h1{font-size:16px}.brand img{width:56px;height:56px}}
-    /* animations */
-    @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velu Memorial Social Trust</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fbfc;
+    color:#222;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+}
+
+.logo-text h2{
+    color:#004aad;
+    font-size:20px;
+}
+
+.logo-text p{
+    color:#28a36a;
+    font-size:12px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#004aad;
+    font-weight:600;
+}
+
+/* HERO */
+
+.hero{
+    min-height:85vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(to bottom,#f6fbff,#ffffff);
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero-top{
+    color:#28a36a;
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    color:#004aad;
+    font-size:65px;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero h3{
+    color:#1d7c44;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:24px;
+    color:#004aad;
+    font-weight:500;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    background:#004aad;
+    color:white;
+    padding:14px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* SECTION */
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    color:#004aad;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about p{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    line-height:1.9;
+    color:#555;
+}
+
+/* VALUES */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.card h3{
+    color:#28a36a;
+    margin-bottom:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* VOLUNTEER */
+
+.volunteer{
+    background:white;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+button{
+    background:#28a36a;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* CONTACT */
+
+.contact-box{
+    text-align:center;
+    line-height:2;
+}
+
+.socials{
+    margin-top:20px;
+}
+
+.socials a{
+    text-decoration:none;
+    color:#004aad;
+    margin:0 10px;
+    font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+    background:#003b8e;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h3{
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero-top{
+    font-size:20px;
+}
+
+.hero h3{
+    font-size:22px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+nav{
+    display:none;
+}
+
+}
+
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <img src="Velu.png" alt="Velu Memorial Social Trust logo" id="logoImg" />
-        <div>
-          <h1>Velu Memorial Social Trust</h1>
-          <div class="tag">Serving Society with Love & Legacy</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
 
-    <main>
-      <section id="home" class="hero">
-        <div class="hero-card">
-          <h2>Velu Memorial Social Trust</h2>
-          <p class="muted">A volunteer-driven initiative in memory of Late Mr. Velu. We provide health support, digital literacy, and education awareness to underserved communities.</p>
-          <div class="cta">
-            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Help</button>
-            <button class="btn alt" onclick="openDonate()">Donate Now</button>
-          </div>
-        </div>
-        <aside>
-          <div class="card">
-            <h3>Contact</h3>
-            <p class="muted">Email: <a href="mailto:velumemorialsocialtrust@gmail.com">velumemorialsocialtrust@gmail.com</a><br/>Phone: <a href="tel:+919159783639">9159783639</a><br/>Location: Vellore, Tamil Nadu</p>
-          </div>
-          <div class="card">
-            <h3>Quick Mission</h3>
-            <p class="muted">Helping citizens apply for Ayushman cards, providing education & digital training, and supporting elderly and needy families.</p>
-          </div>
-        </aside>
-      </section>
+<header>
+<div class="navbar">
 
-      <section id="about">
-        <div class="card">
-          <h3>About Us</h3>
-          <p class="muted">Velu Memorial Social Trust is founded by <strong>Snega</strong> in memory of Late Mr. Velu. Our goal is to continue his legacy of compassion through healthcare, education, and social support initiatives.</p>
-        </div>
-      </section>
+<div class="logo">
+<img src="Velu.png" alt="Logo">
+<div class="logo-text">
+<h2>Velu Memorial Social Trust</h2>
+<p>Serving Society with Love & Legacy</p>
+</div>
+</div>
 
-      <section id="services">
-        <h3>Our Services</h3>
-        <div class="grid">
-          <div class="service">
-            <h4>Ayushman Card Help</h4>
-            <p class="muted">Assisting families to check eligibility and complete Ayushman Bharat applications.</p>
-          </div>
-          <div class="service">
-            <h4>Health Camps</h4>
-            <p class="muted">Organizing health checkups, blood donation drives, and vaccination awareness programmes.</p>
-          </div>
-          <div class="service">
-            <h4>Social Welfare</h4>
-            <p class="muted">Support for elderly, food distribution, and emergency aid in local communities.</p>
-          </div>
-          <div class="service">
-            <h4>Digital Awareness</h4>
-            <p class="muted">Helping people use government portals, Aadhaar services, and online forms.</p>
-          </div>
-          <div class="service">
-            <h4>Volunteer Training</h4>
-            <p class="muted">Training local volunteers (Velu Sevak) to assist families and spread awareness.</p>
-          </div>
-          <div class="service">
-            <h4>Education Support</h4>
-            <p class="muted">Free computer basics, scholarship guidance, and motivation classes for children and youth.</p>
-          </div>
-        </div>
-      </section>
+<nav>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#values">Values</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#volunteer">Volunteer</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-      <section id="education">
-        <h3>Education Programmes</h3>
-        <div class="card">
-          <div class="education-list">
-            <div>
-              <strong>Digital Literacy Workshops</strong>
-              <p class="muted">Learn basic computer skills, smartphone usage, and safe internet practices.</p>
-            </div>
-            <div>
-              <strong>Form-Filling Help</strong>
-              <p class="muted">Hands-on assistance with scholarship forms, Ayushman applications, and other government forms.</p>
-            </div>
-            <div>
-              <strong>Student Motivation & Tutoring</strong>
-              <p class="muted">After-school sessions for foundational education and exam preparation tips.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+</div>
+</header>
 
-      <section id="contact">
-        <h3>Contact & Request Help</h3>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <p class="muted">Reach out if you need help with Ayushman Card application or want to volunteer.</p>
-            <div class="form-row">
-              <label>Name</label>
-              <input type="text" id="name" placeholder="Your full name" />
-            </div>
-            <div class="form-row">
-              <label>Phone</label>
-              <input type="tel" id="phone" placeholder="9159783639" />
-            </div>
-            <div class="form-row">
-              <label>Message</label>
-              <textarea id="message" rows="4" placeholder="Tell us how we can help"></textarea>
-            </div>
-            <div style="display:flex;gap:8px">
-              <button class="btn" onclick="submitForm()">Send Message</button>
-              <button class="btn alt" onclick="location.href='mailto:velumemorialsocialtrust@gmail.com'">Email Us</button>
-            </div>
-            <p id="formStatus" style="margin-top:8px;color:var(--muted);font-size:14px"></p>
-          </div>
-          <aside class="card">
-            <h4>Contact Details</h4>
-            <p class="muted">Email: <a href="mailto:velumemorialsocialtrust@gmail.com">velumemorialsocialtrust@gmail.com</a><br/>Phone: <a href="tel:+919159783639">9159783639</a><br/>Location: Vellore, Tamil Nadu</p>
-            <h4>Volunteer</h4>
-            <p class="muted">Join as a Velu Sevak. Call or email us to get guidance on next steps.</p>
-          </aside>
-        </div>
-      </section>
+<section class="hero">
 
-    </main>
+<div class="hero-content">
 
-    <footer>
-      <div>Designed by MrSa Solution</div>
-    </footer>
-  </div>
+<div class="hero-top">
+🌿 Legacy • Unity • Growth 🌿
+</div>
 
-  <!-- Donate Modal -->
-  <div id="donateModal" class="modal">
-    <div class="modal-card">
-      <div class="help-block">Support Velu Memorial Social Trust</div>
-      <p>Thank you for your willingness to support our work. At the moment donations are managed directly. Please contact us at <strong>velumemorialsocialtrust@gmail.com</strong> or <strong>9159783639</strong>.</p>
-      <p class="muted">(Placeholder button. Online payment integration can be added later.)</p>
-      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:10px;">
-        <button class="btn alt" onclick="closeDonate()">Close</button>
-      </div>
-    </div>
-  </div>
+<h1>
+Velu Memorial<br>
+Social Trust
+</h1>
 
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    }));
+<h3>
+Serving Society with Love & Legacy
+</h3>
 
-    function openDonate(){document.getElementById('donateModal').classList.add('open');}
-    function closeDonate(){document.getElementById('donateModal').classList.remove('open');}
+<p>
+His Values. Our Mission.
+</p>
 
-    // Form submission mock
-    function submitForm(){
-      const name=document.getElementById('name').value.trim();
-      const phone=document.getElementById('phone').value.trim();
-      const message=document.getElementById('message').value.trim();
-      const status=document.getElementById('formStatus');
-      if(!name||!phone){status.textContent='Please enter your name and phone.';return;}
-      status.textContent='Thank you, '+name+'. We received your message. Call/WhatsApp 9159783639 for faster help.';
-      document.getElementById('name').value='';document.getElementById('phone').value='';document.getElementById('message').value='';
-    }
-  </script>
+<a href="#contact" class="btn">
+Contact Us
+</a>
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<div class="container">
+
+<h2 class="section-title">
+About Us
+</h2>
+
+<p>
+Velu Memorial Social Trust was established on 21 October 2025 with a vision of bringing people together through compassion, unity and positive social impact. Inspired by enduring values and community spirit, the trust strives to create opportunities that encourage participation, growth and meaningful contributions to society.
+</p>
+
+</div>
+
+</section>
+
+<section id="values">
+
+<div class="container">
+
+<h2 class="section-title">
+Our Core Values
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Legacy</h3>
+<p>Honouring values that inspire future generations.</p>
+</div>
+
+<div class="card">
+<h3>Unity</h3>
+<p>Bringing people together for a stronger community.</p>
+</div>
+
+<div class="card">
+<h3>Growth</h3>
+<p>Creating opportunities for positive change and development.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<div class="container">
+
+<h2 class="section-title">
+Gallery
+</h2>
+
+<div class="gallery">
+
+<img src="gallery1.jpg">
+<img src="gallery2.jpg">
+<img src="gallery3.jpg">
+<img src="gallery4.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="volunteer" class="volunteer">
+
+<div class="container">
+
+<h2 class="section-title">
+Become a Volunteer
+</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="tel" placeholder="Phone Number">
+
+<textarea rows="5" placeholder="Tell us about yourself"></textarea>
+
+<button type="submit">
+Submit
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Contact Us
+</h2>
+
+<div class="contact-box">
+
+<p>📞 +91 8838037689</p>
+
+<p>📧 velumemorialsocialtrust@gmail.com</p>
+
+<p>📍 Tamil Nadu, India</p>
+
+<div class="socials">
+
+<a href="#">Facebook</a>
+
+<a href="#">Instagram</a>
+
+<a href="#">YouTube</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Velu Memorial Social Trust</h3>
+
+<p>Legacy • Unity • Growth</p>
+
+<p>Serving Society with Love & Legacy</p>
+
+<p>© 2026 All Rights Reserved</p>
+
+</footer>
+
 </body>
 </html>
