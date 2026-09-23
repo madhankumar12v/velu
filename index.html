@@ -1,407 +1,2150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velu Memorial Social Trust</title>
-<meta name="description" content="Velu Memorial Social Trust, Tamil Nadu. Serving society with love and legacy through unity, compassion and positive social impact.">
-<meta name="theme-color" content="#004aad">
-<link rel="icon" href="Velu.png">
+    <meta charset="UTF-8">
 
-<!-- Share previews (WhatsApp / Facebook). Replace the URL with your real domain. -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Velu Memorial Social Trust">
-<meta property="og:description" content="Serving Society with Love & Legacy. His Values. Our Mission.">
-<meta property="og:image" content="banner.jpg">
-<!-- <meta property="og:url" content="https://your-domain.com/"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="description"
+          content="Velu Memorial Social Trust serves society through compassion, unity, growth and meaningful community initiatives.">
 
-<style>
-/* ===== BASICS ===== */
-:root{
-  --blue:#004aad;
-  --blue-dark:#003b8e;
-  --green:#1d7c44;          /* text + buttons (good contrast) */
-  --green-bright:#28a36a;   /* decoration only */
-  --bg:#f8fbfc;
-  --text:#222;
-  --muted:#555;
-  --card:#fff;
-  --line:#e3eaee;
-}
-@media (prefers-color-scheme:dark){
-  /* remove this block if you want the site to stay light in dark mode */
-  :root{}
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:'Poppins','Noto Sans Tamil',sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
-img{max-width:100%;height:auto}
-section{padding:80px 20px;scroll-margin-top:90px}
-.container{max-width:1200px;margin:auto}
-.alt{background:#fff}
-.section-title{text-align:center;color:var(--blue);margin-bottom:40px;font-size:clamp(1.75rem,4vw,2.4rem)}
-.section-sub{text-align:center;max-width:640px;margin:-24px auto 36px;color:var(--muted)}
+    <meta name="keywords"
+          content="Velu Memorial Social Trust, social trust Tamil Nadu, volunteer Tamil Nadu, community service, charity trust">
 
-/* Keyboard focus */
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,label:focus-visible{
-  outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+    <meta name="author" content="Velu Memorial Social Trust">
 
-.skip{position:absolute;left:-999px;top:0;background:var(--blue);color:#fff;padding:10px 16px;z-index:3000}
-.skip:focus{left:10px;top:10px}
+    <meta name="theme-color" content="#0759c7">
 
-/* ===== HEADER ===== */
-header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.navbar{position:relative;max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo img{width:55px;height:55px;object-fit:contain}
-.logo-text h2{color:var(--blue);font-size:20px;line-height:1.2}
-.logo-text p{color:var(--green);font-size:12px}
-nav ul{display:flex;list-style:none;gap:22px}
-nav a{text-decoration:none;color:var(--blue);font-weight:600;transition:color .3s}
-nav a:hover{color:var(--green)}
+    <meta property="og:title"
+          content="Velu Memorial Social Trust">
 
-/* CSS-only mobile menu */
-.menu-toggle{position:absolute;opacity:0;pointer-events:none}
-.menu-icon{display:none;font-size:28px;color:var(--blue);cursor:pointer;padding:4px 10px;line-height:1}
-.menu-toggle:focus-visible + .menu-icon{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+    <meta property="og:description"
+          content="Serving society with love, unity and legacy.">
 
-/* ===== BANNER ===== */
-.banner-section{background:#fff;padding:20px 20px 0}
-.banner-container{max-width:1200px;margin:auto;overflow:hidden;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,.10);background:#e8eef2}
-.banner-container img{width:100%;aspect-ratio:6/3;object-fit:cover;display:block}
+    <meta property="og:image"
+          content="https://velumemorialsocialtrust.vercel.app/banner.jpg">
 
-/* ===== HERO ===== */
-.hero{min-height:60vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:70px 20px;background:linear-gradient(#f6fbff,#fff)}
-.hero-content{max-width:900px}
-.hero-top{color:var(--green);font-size:clamp(1.1rem,3vw,1.75rem);font-weight:600;margin-bottom:20px}
-.hero h1{color:var(--blue);font-size:clamp(2.25rem,6vw,4rem);line-height:1.1;margin-bottom:25px}
-.hero h3{color:var(--green);font-size:clamp(1.25rem,3vw,1.9rem);margin-bottom:15px}
-.hero p{font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--blue);font-weight:500}
+    <meta property="og:url"
+          content="https://velumemorialsocialtrust.vercel.app/">
 
-.btn{display:inline-block;margin-top:30px;background:var(--blue);color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;transition:.3s;border:0;cursor:pointer;font-family:inherit;font-size:15px}
-.btn:hover{background:var(--green);transform:translateY(-2px)}
-.btn-green{background:var(--green)}
-.btn-green:hover{background:var(--blue)}
+    <meta property="og:type" content="website">
 
-/* ===== ABOUT ===== */
-.about p{text-align:center;max-width:800px;margin:0 auto 16px;line-height:1.9;color:var(--muted)}
+    <meta name="twitter:card" content="summary_large_image">
 
-/* ===== CARDS (values + work) ===== */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
-.card{background:var(--card);padding:30px;border-radius:15px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,.06);transition:.3s}
-.card:hover{transform:translateY(-5px);box-shadow:0 12px 25px rgba(0,0,0,.10)}
-.card i{font-size:34px;color:var(--green-bright);margin-bottom:14px}
-.card h3{color:var(--green);margin-bottom:10px;font-size:22px}
-.card p{color:var(--muted);line-height:1.7}
-.alt .card{border:1px solid var(--line);box-shadow:none}
+    <title>Velu Memorial Social Trust | Serving Society with Love & Legacy</title>
 
-/* ===== GALLERY + LIGHTBOX ===== */
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.gallery a{display:block;border-radius:12px;overflow:hidden;background:#e8eef2}
-.gallery img{width:100%;height:250px;object-fit:cover;display:block;transition:transform .3s}
-.gallery a:hover img{transform:scale(1.03)}
-.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:2000;justify-content:center;align-items:center;cursor:zoom-out}
-.lightbox:target{display:flex}
-.lightbox img{max-width:92%;max-height:88vh;border-radius:10px}
-.lightbox span{position:absolute;top:16px;right:22px;color:#fff;font-size:36px;line-height:1}
+    <link rel="icon" type="image/png" href="Velu.png">
+    <link rel="apple-touch-icon" href="Velu.png">
 
-/* ===== VOLUNTEER FORM ===== */
-form{max-width:700px;margin:auto}
-label.field{display:block;font-weight:500;font-size:14px;margin:0 0 6px;color:var(--muted)}
-input,textarea{width:100%;padding:14px;margin-bottom:16px;border:1px solid #cfd8dc;border-radius:8px;font-family:inherit;font-size:15px;background:#fff}
-input:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 5px rgba(0,74,173,.2)}
-.hp{position:absolute;left:-9999px}
-form .btn{margin-top:0}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-/* ===== SUPPORT ===== */
-.support-box{max-width:700px;margin:auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:15px;padding:30px}
-.support-box p{color:var(--muted);line-height:1.8}
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+          rel="stylesheet">
 
-/* ===== CONTACT ===== */
-.contact-box{text-align:center;line-height:2;font-size:17px}
-.contact-box a.link{color:var(--blue);text-decoration:none}
-.contact-box a.link:hover{text-decoration:underline}
-.socials,.footer-socials{display:flex;justify-content:center;align-items:center;gap:15px;flex-wrap:wrap}
-.socials{margin-top:24px}
-.socials a{width:50px;height:50px;display:flex;justify-content:center;align-items:center;border-radius:50%;color:#fff;text-decoration:none;font-size:22px;transition:.3s}
-.socials a:hover{transform:translateY(-5px) scale(1.08);box-shadow:0 8px 18px rgba(0,0,0,.2)}
-.facebook{background:#1877F2}
-.instagram{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}
-.youtube{background:#F00}
-.social-text{margin-top:12px;color:#666;font-size:14px}
-.map{margin-top:40px;border-radius:15px;overflow:hidden;box-shadow:0 8px 25px rgba(0,0,0,.10)}
-.map iframe{width:100%;height:320px;border:0;display:block}
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-/* ===== FOOTER ===== */
-footer{background:var(--blue-dark);color:#fff;text-align:center;padding:40px 20px}
-footer h3{margin-bottom:10px;font-size:22px}
-footer p{margin:5px 0;font-size:14px}
-.footer-socials{margin:20px 0 6px}
-.footer-socials a{width:42px;height:42px;display:flex;justify-content:center;align-items:center;border-radius:50%;background:#fff;color:var(--blue-dark);text-decoration:none;font-size:18px;transition:.3s}
-.footer-socials a:hover{transform:translateY(-4px)}
-.copy{margin-top:18px}
+    <style>
+        :root {
+            --primary: #0759c7;
+            --primary-dark: #043d88;
+            --secondary: #159a62;
+            --secondary-dark: #0e7549;
+            --accent: #f5b544;
+            --dark: #122033;
+            --text: #596779;
+            --muted: #7c8896;
+            --light: #f5f9fd;
+            --white: #ffffff;
+            --border: #e3eaf2;
+            --danger: #d63939;
+            --shadow: 0 18px 50px rgba(20, 53, 90, .11);
+            --radius: 18px;
+        }
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  .navbar{padding:10px 15px}
-  .logo img{width:45px;height:45px}
-  .logo-text h2{font-size:15px}
-  .logo-text p{font-size:11px}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  .menu-icon{display:block}
-  nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 10px 14px rgba(0,0,0,.08)}
-  nav ul{flex-direction:column;gap:0}
-  nav a{display:block;padding:15px 20px;border-top:1px solid var(--line)}
-  .menu-toggle:checked ~ nav{display:block}
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
 
-  .banner-section{padding:10px 10px 0}
-  .banner-container{border-radius:10px}
-  .hero{padding:60px 20px;min-height:50vh}
-  section{padding:60px 20px}
-  .gallery{grid-template-columns:repeat(2,1fr);gap:10px}
-  .gallery img{height:180px}
-}
-@media(max-width:480px){
-  .logo-text h2{font-size:13px}
-  .gallery{grid-template-columns:1fr}
-  .gallery img{height:230px}
-}
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
 
-@media (prefers-reduced-motion:reduce){
-  *{transition:none!important;scroll-behavior:auto!important}
-}
-</style>
+        body.no-scroll {
+            overflow: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .container {
+            width: min(1140px, calc(100% - 40px));
+            margin-inline: auto;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 14px;
+            color: var(--secondary);
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before,
+        .eyebrow::after {
+            width: 24px;
+            height: 2px;
+            content: "";
+            background: var(--accent);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        h1,
+        h2 {
+            font-family: "Playfair Display", serif;
+        }
+
+        h2 {
+            margin-bottom: 18px;
+            font-size: clamp(2rem, 4vw, 3.1rem);
+        }
+
+        .section-heading p {
+            font-size: 1.05rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 52px;
+            padding: 0 25px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+            text-decoration: none;
+            transition: .3s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(7, 89, 199, .25);
+        }
+
+        .btn-secondary {
+            background: var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-dark);
+        }
+
+        .btn-outline {
+            border-color: rgba(255, 255, 255, .75);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-light {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-light:hover {
+            background: #eaf2ff;
+            color: var(--primary-dark);
+        }
+
+        /* Topbar */
+
+        .topbar {
+            padding: 9px 0;
+            background: var(--primary-dark);
+            color: rgba(255, 255, 255, .9);
+            font-size: .86rem;
+        }
+
+        .topbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .topbar a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .topbar-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Header */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, .96);
+            border-bottom: 1px solid rgba(227, 234, 242, .9);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        .brand img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
+
+        .brand-title {
+            display: block;
+            color: var(--primary);
+            font-size: 1.05rem;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        .brand-subtitle {
+            display: block;
+            margin-top: 3px;
+            color: var(--secondary);
+            font-size: .69rem;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 23px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            position: relative;
+            color: var(--dark);
+            font-size: .91rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-menu a::after {
+            position: absolute;
+            right: 0;
+            bottom: -8px;
+            left: 0;
+            height: 2px;
+            content: "";
+            background: var(--secondary);
+            transform: scaleX(0);
+            transition: .3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 42px;
+            height: 42px;
+            border: 0;
+            border-radius: 8px;
+            background: var(--light);
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Hero */
+
+        .hero {
+            position: relative;
+            isolation: isolate;
+            min-height: 680px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg, rgba(2, 39, 91, .94), rgba(4, 77, 147, .72)),
+                url("banner.jpg") center/cover no-repeat;
+        }
+
+        .hero::after {
+            position: absolute;
+            right: -130px;
+            bottom: -210px;
+            z-index: -1;
+            width: 530px;
+            height: 530px;
+            border: 75px solid rgba(255, 255, 255, .08);
+            border-radius: 50%;
+            content: "";
+        }
+
+        .hero-content {
+            max-width: 780px;
+            color: var(--white);
+        }
+
+        .hero .eyebrow {
+            color: #d8f5e5;
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+            color: var(--white);
+            font-size: clamp(2.8rem, 7vw, 5.3rem);
+        }
+
+        .hero h1 span {
+            color: #8ee4b7;
+        }
+
+        .hero-description {
+            max-width: 630px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, .9);
+            font-size: 1.15rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            margin-top: 50px;
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--white);
+            font-family: "Playfair Display", serif;
+            font-size: 2rem;
+        }
+
+        .stat span {
+            color: rgba(255, 255, 255, .75);
+            font-size: .85rem;
+        }
+
+        /* About */
+
+        .about {
+            background: var(--light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            min-height: 440px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .experience-box {
+            position: absolute;
+            right: -25px;
+            bottom: 25px;
+            width: 175px;
+            padding: 20px;
+            border-radius: 14px;
+            background: var(--secondary);
+            color: var(--white);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .experience-box strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 2.2rem;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            display: grid;
+            gap: 12px;
+            margin: 25px 0 30px;
+            list-style: none;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .check-list i {
+            margin-top: 5px;
+            color: var(--secondary);
+        }
+
+        /* Impact */
+
+        .impact {
+            background:
+                linear-gradient(90deg, rgba(7, 89, 199, .94), rgba(4, 61, 136, .94)),
+                url("banner.jpg") center/cover no-repeat;
+            color: var(--white);
+        }
+
+        .impact h2,
+        .impact .section-heading p {
+            color: var(--white);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .impact-card {
+            padding: 28px 20px;
+            border: 1px solid rgba(255, 255, 255, .2);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, .1);
+            text-align: center;
+        }
+
+        .impact-card i {
+            margin-bottom: 10px;
+            color: #8ee4b7;
+            font-size: 1.7rem;
+        }
+
+        .impact-card strong {
+            display: block;
+            color: var(--white);
+            font-family: "Playfair Display", serif;
+            font-size: 2.4rem;
+        }
+
+        .impact-card span {
+            color: rgba(255, 255, 255, .82);
+        }
+
+        /* Values */
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .value-card {
+            padding: 35px 28px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: var(--white);
+            box-shadow: 0 8px 30px rgba(20, 53, 90, .04);
+            transition: .3s ease;
+        }
+
+        .value-card:hover {
+            border-color: transparent;
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+
+        .value-icon {
+            display: grid;
+            width: 64px;
+            height: 64px;
+            margin-bottom: 22px;
+            place-items: center;
+            border-radius: 14px;
+            background: #e8f6ef;
+            color: var(--secondary);
+            font-size: 1.5rem;
+        }
+
+        .value-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.35rem;
+        }
+
+        /* Gallery */
+
+        .gallery {
+            background: var(--light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            min-height: 250px;
+            border-radius: 14px;
+            cursor: pointer;
+        }
+
+        .gallery-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s ease;
+        }
+
+        .gallery-item::after {
+            position: absolute;
+            inset: 0;
+            content: "";
+            background: linear-gradient(transparent 50%, rgba(0, 0, 0, .55));
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Join */
+
+        .join-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .join-card {
+            padding: 40px;
+            border-radius: var(--radius);
+            background: var(--light);
+        }
+
+        .join-card.green {
+            background: #eaf8f0;
+        }
+
+        .join-card h3 {
+            margin: 20px 0 12px;
+            font-size: 1.7rem;
+        }
+
+        .join-icon {
+            display: grid;
+            width: 65px;
+            height: 65px;
+            place-items: center;
+            border-radius: 50%;
+            background: var(--white);
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .green .join-icon {
+            color: var(--secondary);
+        }
+
+        .join-card ul {
+            display: grid;
+            gap: 8px;
+            margin: 20px 0 28px;
+            list-style: none;
+        }
+
+        .join-card li i {
+            margin-right: 8px;
+            color: var(--secondary);
+        }
+
+        /* Donation */
+
+        .donation {
+            background: var(--light);
+        }
+
+        .donation-box {
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            align-items: center;
+            gap: 45px;
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            border-radius: var(--radius);
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .donation-box h3 {
+            margin-bottom: 14px;
+            font-size: 1.8rem;
+        }
+
+        .donation-box p {
+            margin-bottom: 18px;
+        }
+
+        .upi-details {
+            margin: 20px 0;
+            padding: 16px;
+            border-left: 4px solid var(--secondary);
+            border-radius: 8px;
+            background: #f2fbf6;
+        }
+
+        .upi-details strong {
+            color: var(--dark);
+        }
+
+        .qr-code {
+            width: 230px;
+            height: 230px;
+            margin: auto;
+            object-fit: cover;
+            border: 8px solid var(--white);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .12);
+        }
+
+        .small-note {
+            margin-top: 15px;
+            color: var(--muted);
+            font-size: .82rem;
+        }
+
+        /* Form */
+
+        .form-section {
+            background: var(--white);
+        }
+
+        .form-wrapper {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            overflow: hidden;
+            border-radius: var(--radius);
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .form-info {
+            padding: 50px 40px;
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .form-info h2 {
+            color: var(--white);
+        }
+
+        .form-info p {
+            color: rgba(255, 255, 255, .82);
+        }
+
+        .form-points {
+            display: grid;
+            gap: 18px;
+            margin-top: 30px;
+            list-style: none;
+        }
+
+        .form-points li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .form-points i {
+            color: #8ee4b7;
+        }
+
+        form {
+            padding: 50px 40px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--dark);
+            font-size: .9rem;
+            font-weight: 600;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            outline: none;
+            background: var(--white);
+            color: var(--dark);
+            transition: .25s ease;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(7, 89, 199, .1);
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-message {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            background: #eaf8f0;
+            color: #147a4b;
+            font-weight: 600;
+        }
+
+        /* Testimonials */
+
+        .testimonials {
+            background: var(--light);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .testimonial-card {
+            padding: 30px;
+            border-radius: 15px;
+            background: var(--white);
+            box-shadow: 0 8px 25px rgba(20, 53, 90, .06);
+        }
+
+        .testimonial-card .stars {
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .testimonial-card p {
+            margin-bottom: 18px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        /* Contact */
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-bottom: 45px;
+        }
+
+        .contact-card {
+            padding: 28px 20px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .contact-card i {
+            margin-bottom: 12px;
+            color: var(--secondary);
+            font-size: 1.6rem;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .contact-card a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: var(--primary);
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .socials a {
+            display: grid;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: .3s ease;
+        }
+
+        .socials a:hover {
+            transform: translateY(-4px);
+        }
+
+        .facebook {
+            background: #1877f2;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+        }
+
+        .youtube {
+            background: #f00;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 55px 0 25px;
+            background: #071d3d;
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 45px;
+            padding-bottom: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        footer p {
+            max-width: 370px;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, .7);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            padding-top: 22px;
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            text-align: center;
+            font-size: .85rem;
+        }
+
+        /* Floating buttons */
+
+        .whatsapp-button,
+        .scroll-top {
+            position: fixed;
+            right: 22px;
+            z-index: 900;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, .2);
+            transition: .3s ease;
+        }
+
+        .whatsapp-button {
+            bottom: 22px;
+            width: 58px;
+            height: 58px;
+            background: #25d366;
+            font-size: 1.8rem;
+        }
+
+        .whatsapp-button:hover {
+            background: #1ebe5d;
+            transform: scale(1.1);
+        }
+
+        .scroll-top {
+            right: 24px;
+            bottom: 92px;
+            width: 42px;
+            height: 42px;
+            border: 0;
+            background: var(--primary);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Gallery lightbox */
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, .9);
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: min(1000px, 95vw);
+            max-height: 85vh;
+            border-radius: 10px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 22px;
+            right: 25px;
+            border: 0;
+            background: transparent;
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        /* Cookie notice */
+
+        .cookie-notice {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1500;
+            display: none;
+            max-width: 380px;
+            padding: 20px;
+            border-radius: 14px;
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .cookie-notice.show {
+            display: block;
+        }
+
+        .cookie-notice h3 {
+            margin-bottom: 8px;
+        }
+
+        .cookie-notice p {
+            margin-bottom: 15px;
+            font-size: .9rem;
+        }
+
+        .cookie-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cookie-actions button {
+            min-height: 40px;
+            padding: 0 15px;
+            border: 0;
+            border-radius: 6px;
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .cookie-actions button:last-child {
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 950px) {
+            .nav-menu {
+                position: absolute;
+                top: 78px;
+                right: 20px;
+                left: 20px;
+                display: none;
+                padding: 20px;
+                border: 1px solid var(--border);
+                border-radius: 12px;
+                background: var(--white);
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: grid;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .about-grid,
+            .form-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-image {
+                max-width: 650px;
+                margin: auto;
+            }
+
+            .form-info {
+                padding: 40px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: min(100% - 30px, 1140px);
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .topbar-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .topbar-links {
+                display: none;
+            }
+
+            .brand-title {
+                font-size: .88rem;
+            }
+
+            .brand-subtitle {
+                font-size: .6rem;
+            }
+
+            .brand img {
+                width: 44px;
+                height: 44px;
+            }
+
+            .hero {
+                min-height: 640px;
+            }
+
+            .hero-actions,
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .hero-stats {
+                gap: 22px;
+            }
+
+            .values-grid,
+            .join-grid,
+            .testimonial-grid,
+            .contact-content,
+            .form-row,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .gallery-item {
+                min-height: 170px;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 2;
+            }
+
+            .donation-box {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .join-card,
+            form,
+            .form-info,
+            .donation-box {
+                padding: 28px 22px;
+            }
+
+            .experience-box {
+                right: 12px;
+                bottom: 15px;
+                width: 145px;
+                padding: 14px;
+            }
+
+            .cookie-notice {
+                right: 15px;
+                bottom: 15px;
+                left: 15px;
+                max-width: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<a class="skip" href="#main">Skip to content</a>
 
-<!-- ===== HEADER ===== -->
-<header>
-  <div class="navbar">
-    <a class="logo" href="#top" aria-label="Velu Memorial Social Trust home">
-      <img src="Velu.png" alt="Velu Memorial Social Trust logo" width="55" height="55">
-      <div class="logo-text">
-        <h2>Velu Memorial Social Trust</h2>
-        <p>Serving Society with Love &amp; Legacy</p>
-      </div>
+    <!-- Top contact bar -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <span>
+                <i class="fa-solid fa-heart"></i>
+                Serving Society with Love & Legacy
+            </span>
+
+            <div class="topbar-links">
+                <a href="tel:+918838037689">
+                    <i class="fa-solid fa-phone"></i>
+                    +91 8838037689
+                </a>
+
+                <a href="mailto:velumemorialsocialtrust@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    Email Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="#home" class="brand">
+                <img src="Velu.png"
+                     alt="Velu Memorial Social Trust logo">
+
+                <span>
+                    <strong class="brand-title">
+                        Velu Memorial Social Trust
+                    </strong>
+
+                    <small class="brand-subtitle">
+                        Legacy • Unity • Growth
+                    </small>
+                </span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#values">Values</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#join-us">Join Us</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="eyebrow">
+                        Together for a better tomorrow
+                    </div>
+
+                    <h1>
+                        His Values.<br>
+                        <span>Our Mission.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Velu Memorial Social Trust brings people together through
+                        compassion, unity and meaningful service to create a stronger
+                        and more caring society.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#join-us" class="btn">
+                            Join Our Mission
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                        <a href="#about" class="btn btn-outline">
+                            Discover Our Story
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <strong>2025</strong>
+                            <span>Established</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>3</strong>
+                            <span>Core values</span>
+                        </div>
+
+                        <div class="stat">
+                            <strong>∞</strong>
+                            <span>Possibilities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section about" id="about">
+            <div class="container about-grid">
+                <div class="about-image">
+                    <img src="gallery1.jpg"
+                         alt="Velu Memorial Social Trust community activity"
+                         loading="lazy">
+
+                    <div class="experience-box">
+                        <strong>2025</strong>
+                        <span>Our journey began</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="eyebrow">Who we are</div>
+
+                    <h2>Building a kinder and stronger community</h2>
+
+                    <p>
+                        Velu Memorial Social Trust was established on 21 October 2025
+                        with a vision of bringing people together through compassion,
+                        unity and positive social impact.
+                    </p>
+
+                    <p>
+                        Inspired by enduring values and community spirit, we strive to
+                        create opportunities that encourage participation, growth and
+                        meaningful contributions to society.
+                    </p>
+
+                    <ul class="check-list">
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Encouraging meaningful community participation
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Supporting positive social initiatives
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Creating a lasting legacy of service
+                        </li>
+                    </ul>
+
+                    <a href="#volunteer" class="btn">
+                        Be Part of the Change
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact -->
+        <section class="section impact" id="impact">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Our purpose</div>
+
+                    <h2>Small Actions. Meaningful Impact.</h2>
+
+                    <p>
+                        We believe that every contribution, whether large or small,
+                        can help create positive change.
+                    </p>
+                </div>
+
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <strong>2025</strong>
+                        <span>Trust established</span>
+                    </div>
+
+                    <div class="impact-card">
+                        <i class="fa-solid fa-people-group"></i>
+                        <strong>3</strong>
+                        <span>Core values</span>
+                    </div>
+
+                    <div class="impact-card">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <strong>100%</strong>
+                        <span>Commitment to service</span>
+                    </div>
+
+                    <div class="impact-card">
+                        <i class="fa-solid fa-seedling"></i>
+                        <strong>∞</strong>
+                        <span>Opportunities to grow</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="section" id="values">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">What guides us</div>
+
+                    <h2>Our Core Values</h2>
+
+                    <p>
+                        Every action we take is guided by principles that help create
+                        a more united, compassionate and progressive society.
+                    </p>
+                </div>
+
+                <div class="values-grid">
+                    <article class="value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+
+                        <h3>Legacy</h3>
+
+                        <p>
+                            Honouring values that inspire future generations and
+                            preserve the spirit of service.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+
+                        <h3>Unity</h3>
+
+                        <p>
+                            Bringing people together to build stronger relationships
+                            and a connected community.
+                        </p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+
+                        <h3>Growth</h3>
+
+                        <p>
+                            Creating opportunities for personal development, positive
+                            change and social progress.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="section gallery" id="gallery">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Our moments</div>
+
+                    <h2>Making a Difference Together</h2>
+
+                    <p>
+                        A glimpse of the people, activities and values that make our
+                        mission meaningful.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="gallery1.jpg"
+                             alt="Trust activity one"
+                             loading="lazy">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="gallery2.jpg"
+                             alt="Trust activity two"
+                             loading="lazy">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="gallery3.jpg"
+                             alt="Trust activity three"
+                             loading="lazy">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="gallery4.jpg"
+                             alt="Trust activity four"
+                             loading="lazy">
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="banner.jpg"
+                             alt="Velu Memorial Social Trust community"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join -->
+        <section class="section" id="join-us">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Get involved</div>
+
+                    <h2>Be Part of Our Mission</h2>
+
+                    <p>
+                        Whether you contribute your time or become a long-term member,
+                        your support can make a meaningful difference.
+                    </p>
+                </div>
+
+                <div class="join-grid">
+                    <article class="join-card green">
+                        <div class="join-icon">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+
+                        <h3>Volunteer With Us</h3>
+
+                        <p>
+                            Share your time, skills and ideas to support meaningful
+                            activities and create positive social impact.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Participate in social activities
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Support community programmes
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Meet people with similar values
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Make a positive difference
+                            </li>
+                        </ul>
+
+                        <a href="#volunteer" class="btn btn-secondary">
+                            Become a Volunteer
+                        </a>
+                    </article>
+
+                    <article class="join-card">
+                        <div class="join-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <h3>Become a Member</h3>
+
+                        <p>
+                            Join the Velu Memorial Social Trust family and support
+                            our long-term vision of unity, growth and service.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Be part of our trust community
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Support social initiatives
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Receive trust updates
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Contribute to our mission
+                            </li>
+                        </ul>
+
+                        <a href="#volunteer" class="btn">
+                            Request Membership
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation -->
+        <section class="section donation" id="donate">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Support our work</div>
+
+                    <h2>Every Contribution Matters</h2>
+
+                    <p>
+                        Your support can help us organise meaningful social initiatives
+                        and serve the community.
+                    </p>
+                </div>
+
+                <div class="donation-box">
+                    <div>
+                        <h3>Support Through UPI</h3>
+
+                        <p>
+                            You can support the activities of Velu Memorial Social Trust
+                            using the UPI details below.
+                        </p>
+
+                        <div class="upi-details">
+                            <strong>UPI ID:</strong>
+                            8838037689@sbi
+                        </div>
+
+                        <a href="upi://pay?pa=8838037689@sbi&pn=Velu%20Memorial%20Social%20Trust"
+                           class="btn btn-secondary">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            Donate via UPI
+                        </a>
+
+                        <p class="small-note">
+                            Add donation and tax-benefit information only after confirming
+                            the trust’s applicable registrations and legal approvals.
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- Replace this image with your real UPI QR code -->
+                        <img src="upi-qr-code.png"
+                             class="qr-code"
+                             alt="UPI donation QR code"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer and membership form -->
+        <section class="section form-section" id="volunteer">
+            <div class="container">
+                <div class="form-wrapper">
+                    <div class="form-info">
+                        <div class="eyebrow">Start today</div>
+
+                        <h2>Let’s create an impact together</h2>
+
+                        <p>
+                            Fill out the form and our team will contact you with the
+                            next steps.
+                        </p>
+
+                        <ul class="form-points">
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Become part of a purpose-driven community
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Share your skills and ideas
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Support meaningful social initiatives
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Replace YOUR_FORM_ID with your Formspree form ID -->
+                    <form id="contactForm"
+                          action="https://formspree.io/f/xaenjybn"
+                          method="POST">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-name">Full Name *</label>
+
+                                <input type="text"
+                                       id="full-name"
+                                       name="full_name"
+                                       placeholder="Enter your full name"
+                                       autocomplete="name"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+
+                                <input type="tel"
+                                       id="phone"
+                                       name="phone"
+                                       placeholder="Enter your phone number"
+                                       autocomplete="tel"
+                                       required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   placeholder="Enter your email address"
+                                   autocomplete="email"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="request-type">
+                                I am interested in *
+                            </label>
+
+                            <select id="request-type"
+                                    name="request_type"
+                                    required>
+                                <option value="">Select an option</option>
+                                <option value="Volunteer">Volunteering</option>
+                                <option value="Membership">Membership</option>
+                                <option value="General enquiry">
+                                    General enquiry
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+
+                            <textarea id="message"
+                                      name="message"
+                                      placeholder="Tell us a little about yourself"></textarea>
+                        </div>
+
+                        <input type="hidden"
+                               name="_subject"
+                               value="New request from Velu Memorial Social Trust website">
+
+                        <button type="submit" class="btn">
+                            Submit Request
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+
+                        <p id="formMessage"
+                           class="form-message"
+                           role="status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Community voices</div>
+
+                    <h2>What People Say</h2>
+
+                    <p>
+                        Replace these sample testimonials with genuine feedback from
+                        volunteers, members and community participants.
+                    </p>
+                </div>
+
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            “A meaningful platform that brings people together for
+                            positive social change.”
+                        </p>
+
+                        <div class="testimonial-author">
+                            — Community Member
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            “The trust encourages everyone to contribute according
+                            to their abilities.”
+                        </p>
+
+                        <div class="testimonial-author">
+                            — Volunteer
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+
+                        <p>
+                            “A wonderful initiative based on unity, compassion and
+                            service.”
+                        </p>
+
+                        <div class="testimonial-author">
+                            — Trust Supporter
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="eyebrow">Reach out to us</div>
+
+                    <h2>Contact Us</h2>
+
+                    <p>
+                        We would love to hear from you. Connect with us and become
+                        part of our growing community.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Call Us</h3>
+                        <a href="tel:+918838037689">
+                            +91 8838037689
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <a href="mailto:velumemorialsocialtrust@gmail.com">
+                            velumemorialsocialtrust@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Our Location</h3>
+                        <span>Tamil Nadu, India</span>
+                    </div>
+                </div>
+
+                <div class="socials" aria-label="Social media links">
+                    <a class="facebook"
+                       href="https://www.facebook.com/profile.php?id=61582258115325&sk=followers"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a class="instagram"
+                       href="https://www.instagram.com/velumemorialsocialtrust/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a class="youtube"
+                       href="https://youtube.com/@velumemorialsocialtrust"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Velu Memorial Social Trust</h3>
+
+                    <p>
+                        Serving society with love, unity and legacy. Together,
+                        we can create a better tomorrow.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Quick Links</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#values">Our Values</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#join-us">Join Our Mission</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Important Links</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
+                        <li>
+                            <a href="mailto:velumemorialsocialtrust@gmail.com">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 Velu Memorial Social Trust.
+                    All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp button -->
+    <a class="whatsapp-button"
+       href="https://wa.me/918838037689?text=Hello%20Velu%20Memorial%20Social%20Trust"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat with us on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
-    <label for="menu-toggle" class="menu-icon" aria-hidden="true">&#9776;</label>
+    <!-- Scroll-to-top button -->
+    <button class="scroll-top"
+            id="scrollTop"
+            aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#values">Values</a></li>
-        <li><a href="#work">Our Work</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#volunteer">Volunteer</a></li>
-        <li><a href="#support">Support</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <!-- Gallery lightbox -->
+    <div class="lightbox"
+         id="lightbox"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Image preview">
 
-<main id="main">
+        <button class="lightbox-close"
+                id="lightboxClose"
+                aria-label="Close image preview">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
 
-<!-- ===== BANNER ===== -->
-<div class="banner-section" id="top">
-  <div class="banner-container">
-    <!-- Upload your 6:3 banner as banner.jpg -->
-    <img src="banner.jpg" alt="Velu Memorial Social Trust banner" width="1200" height="600">
-  </div>
-</div>
-
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-top">🌿 Legacy • Unity • Growth 🌿</div>
-    <h1>Velu Memorial<br>Social Trust</h1>
-    <h3>Serving Society with Love &amp; Legacy</h3>
-    <p>His Values. Our Mission.</p>
-    <a href="#volunteer" class="btn">Become a Volunteer</a>
-  </div>
-</section>
-
-<!-- ===== ABOUT ===== -->
-<section id="about" class="about alt">
-  <div class="container">
-    <h2 class="section-title">About Us</h2>
-    <p>
-      Velu Memorial Social Trust was established on 21 October 2025 with a vision of
-      bringing people together through compassion, unity and positive social impact.
-    </p>
-    <p>
-      Inspired by enduring values and community spirit, the trust strives to create
-      opportunities that encourage participation, growth and meaningful contributions to society.
-    </p>
-
-    <!-- TRIBUTE (recommended): add a few lines about Velu and a photo, for example:
-    <p><strong>In memory of Velu</strong><br>Write a short tribute here.</p>
-    <img src="velu-photo.jpg" alt="Velu" width="240" height="240" loading="lazy">
-    -->
-  </div>
-</section>
-
-<!-- ===== VALUES ===== -->
-<section id="values">
-  <div class="container">
-    <h2 class="section-title">Our Core Values</h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fa-solid fa-landmark" aria-hidden="true"></i>
-        <h3>Legacy</h3>
-        <p>Honouring values that inspire future generations.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-people-group" aria-hidden="true"></i>
-        <h3>Unity</h3>
-        <p>Bringing people together for a stronger community.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-seedling" aria-hidden="true"></i>
-        <h3>Growth</h3>
-        <p>Creating opportunities for positive change and development.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== OUR WORK (edit these to match your real activities) ===== -->
-<section id="work" class="alt">
-  <div class="container">
-    <h2 class="section-title">Our Work</h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fa-solid fa-book-open-reader" aria-hidden="true"></i>
-        <h3>Education</h3>
-        <p>Supporting learning and opportunities for young people.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
-        <h3>Health &amp; Wellbeing</h3>
-        <p>Community programmes that care for people's wellbeing.</p>
-      </div>
-      <div class="card">
-        <i class="fa-solid fa-hands-holding-circle" aria-hidden="true"></i>
-        <h3>Community Service</h3>
-        <p>Bringing neighbours together to help those in need.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== GALLERY (click an image to enlarge) ===== -->
-<section id="gallery">
-  <div class="container">
-    <h2 class="section-title">Gallery</h2>
-    <div class="gallery">
-      <a href="#img1" aria-label="Enlarge photo 1"><img src="gallery1.jpg" alt="Velu Memorial Social Trust activity 1" width="400" height="250" loading="lazy"></a>
-      <a href="#img2" aria-label="Enlarge photo 2"><img src="gallery2.jpg" alt="Velu Memorial Social Trust activity 2" width="400" height="250" loading="lazy"></a>
-      <a href="#img3" aria-label="Enlarge photo 3"><img src="gallery3.jpg" alt="Velu Memorial Social Trust activity 3" width="400" height="250" loading="lazy"></a>
-      <a href="#img4" aria-label="Enlarge photo 4"><img src="gallery4.jpg" alt="Velu Memorial Social Trust activity 4" width="400" height="250" loading="lazy"></a>
-    </div>
-  </div>
-</section>
-
-<a href="#gallery" class="lightbox" id="img1"><span aria-hidden="true">&times;</span><img src="gallery1.jpg" alt="Velu Memorial Social Trust activity 1, enlarged" loading="lazy"></a>
-<a href="#gallery" class="lightbox" id="img2"><span aria-hidden="true">&times;</span><img src="gallery2.jpg" alt="Velu Memorial Social Trust activity 2, enlarged" loading="lazy"></a>
-<a href="#gallery" class="lightbox" id="img3"><span aria-hidden="true">&times;</span><img src="gallery3.jpg" alt="Velu Memorial Social Trust activity 3, enlarged" loading="lazy"></a>
-<a href="#gallery" class="lightbox" id="img4"><span aria-hidden="true">&times;</span><img src="gallery4.jpg" alt="Velu Memorial Social Trust activity 4, enlarged" loading="lazy"></a>
-
-<!-- ===== VOLUNTEER ===== -->
-<section id="volunteer" class="alt">
-  <div class="container">
-    <h2 class="section-title">Become a Volunteer</h2>
-    <p class="section-sub">Share your details and we will get in touch with you.</p>
-
-    <!-- FormSubmit: the first submission sends a one-time confirmation email to the address below. -->
-    <form action="https://formsubmit.co/velumemorialsocialtrust@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New volunteer - Velu Memorial Social Trust">
-      <input type="hidden" name="_template" value="table">
-      <!-- After sending, return to your site (replace with your real URL): -->
-      <!-- <input type="hidden" name="_next" value="https://your-domain.com/#volunteer"> -->
-      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-      <label class="field" for="name">Full name</label>
-      <input type="text" id="name" name="name" autocomplete="name" required>
-
-      <label class="field" for="email">Email address</label>
-      <input type="email" id="email" name="email" autocomplete="email" required>
-
-      <label class="field" for="phone">Phone number</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel" required>
-
-      <label class="field" for="message">Tell us about yourself</label>
-      <textarea id="message" name="message" rows="5"></textarea>
-
-      <button type="submit" class="btn btn-green">Send my details</button>
-    </form>
-  </div>
-</section>
-
-<!-- ===== SUPPORT ===== -->
-<section id="support">
-  <div class="container">
-    <h2 class="section-title">Support Our Work</h2>
-    <div class="support-box">
-      <p>
-        Your contribution helps the trust reach more people.
-        <!-- Add registration details here if applicable (Reg. No., 80G / 12A). -->
-      </p>
-      <!-- The button opens a UPI app on mobile. On desktop it does nothing, so the UPI ID is also shown as text. -->
-      <a class="btn btn-green" href="upi://pay?pa=8838037689@sbi&amp;pn=Velu%20Memorial%20Social%20Trust&amp;cu=INR">Donate via UPI (mobile)</a>
-      <p style="margin-top:18px"><strong>UPI ID:</strong> <span style="user-select:all">8838037689@sbi</span></p>
-      <p style="font-size:14px">On a computer? Pay to this UPI ID from any UPI app.</p>
-      <!-- Or show a QR image:
-      <img src="upi-qr.png" alt="UPI QR code for Velu Memorial Social Trust" width="200" height="200" loading="lazy"> -->
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="alt">
-  <div class="container">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="contact-box">
-      <p>📞 <a class="link" href="tel:+918838037689">+91 8838037689</a></p>
-      <p>📧 <a class="link" href="mailto:velumemorialsocialtrust@gmail.com">velumemorialsocialtrust@gmail.com</a></p>
-      <p>📍 Tamil Nadu, India</p>
-
-      <a class="btn btn-green" href="https://wa.me/918838037689" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp
-      </a>
-
-      <div class="socials">
-        <a class="facebook" href="https://www.facebook.com/profile.php?id=61582258115325" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a class="instagram" href="https://www.instagram.com/velumemorialsocialtrust/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a class="youtube" href="https://youtube.com/@velumemorialsocialtrust" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-      </div>
-      <p class="social-text">Follow us on social media</p>
+        <img id="lightboxImage"
+             src=""
+             alt="Gallery image preview">
     </div>
 
-    <!-- MAP (optional): Google Maps > Share > Embed a map, then paste the iframe src below.
-    <div class="map">
-      <iframe src="PASTE_EMBED_URL_HERE" title="Trust location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Cookie notice -->
+    <div class="cookie-notice" id="cookieNotice">
+        <h3>We value your privacy</h3>
+
+        <p>
+            This website uses basic browser storage to remember your preferences.
+            Read our privacy policy for more information.
+        </p>
+
+        <div class="cookie-actions">
+            <button id="acceptCookies">Accept</button>
+            <button id="rejectCookies">Close</button>
+        </div>
     </div>
-    -->
-  </div>
-</section>
 
-</main>
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+        const scrollTop = document.getElementById("scrollTop");
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <h3>Velu Memorial Social Trust</h3>
-  <p>Legacy • Unity • Growth</p>
-  <p>Serving Society with Love &amp; Legacy</p>
-  <p class="copy">© 2026 Velu Memorial Social Trust. All Rights Reserved.</p>
-</footer>
+        /* Mobile navigation */
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navMenu.classList.toggle("active");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        document.querySelectorAll(".nav-menu a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navMenu.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+
+        document.addEventListener("click", function (event) {
+            const clickedInsideMenu =
+                navMenu.contains(event.target) ||
+                menuToggle.contains(event.target);
+
+            if (!clickedInsideMenu) {
+                navMenu.classList.remove("active");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+        });
+
+        /* Scroll-to-top button */
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 500) {
+                scrollTop.classList.add("show");
+            } else {
+                scrollTop.classList.remove("show");
+            }
+        });
+
+        scrollTop.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        /* Gallery lightbox */
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImage = document.getElementById("lightboxImage");
+        const lightboxClose = document.getElementById("lightboxClose");
+
+        document.querySelectorAll(".gallery-item img").forEach(function (image) {
+            image.addEventListener("click", function () {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt;
+                lightbox.classList.add("active");
+                document.body.classList.add("no-scroll");
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+            lightboxImage.src = "";
+        }
+
+        lightboxClose.addEventListener("click", closeLightbox);
+
+        lightbox.addEventListener("click", function (event) {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+
+        /* Form feedback */
+        const contactForm = document.getElementById("contactForm");
+        const formMessage = document.getElementById("formMessage");
+
+        contactForm.addEventListener("submit", function () {
+            formMessage.textContent =
+                "Thank you. Your request is being submitted.";
+            formMessage.style.display = "block";
+        });
+
+        /* Cookie notice */
+        const cookieNotice = document.getElementById("cookieNotice");
+        const acceptCookies = document.getElementById("acceptCookies");
+        const rejectCookies = document.getElementById("rejectCookies");
+
+        if (!localStorage.getItem("cookieChoice")) {
+            setTimeout(function () {
+                cookieNotice.classList.add("show");
+            }, 1200);
+        }
+
+        acceptCookies.addEventListener("click", function () {
+            localStorage.setItem("cookieChoice", "accepted");
+            cookieNotice.classList.remove("show");
+        });
+
+        rejectCookies.addEventListener("click", function () {
+            localStorage.setItem("cookieChoice", "closed");
+            cookieNotice.classList.remove("show");
+        });
+    </script>
 
 </body>
 </html>
