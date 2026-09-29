@@ -81,18 +81,27 @@ nav a:hover{color:var(--green)}
   min-height:72vh;
   display:flex;justify-content:center;align-items:center;text-align:center;
   padding:90px 20px;
-  position:relative;overflow:hidden;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(40,163,106,.08) 0, transparent 45%),
-    radial-gradient(circle at 85% 15%, rgba(0,74,173,.07) 0, transparent 45%),
-    linear-gradient(#f6fbff,#fff);
+  position:relative;overflow:hidden;isolation:isolate;
+  background:linear-gradient(#f6fbff,#fff);
 }
+/* Full-bleed banner illusion behind the whole hero */
 .hero::before{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background-image:radial-gradient(rgba(0,74,173,.06) 1.5px, transparent 1.5px);
-  background-size:26px 26px;
-  mask-image:radial-gradient(ellipse at center, #000 0%, transparent 72%);
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:-2;
+  background:
+    radial-gradient(circle at 12% 22%, rgba(40,163,106,.20) 0, transparent 42%),
+    radial-gradient(circle at 88% 12%, rgba(0,74,173,.20) 0, transparent 42%),
+    radial-gradient(circle at 78% 85%, rgba(40,163,106,.16) 0, transparent 40%),
+    radial-gradient(circle at 8% 88%, rgba(0,74,173,.14) 0, transparent 40%),
+    linear-gradient(120deg, rgba(0,74,173,.10), rgba(40,163,106,.10) 55%, rgba(0,74,173,.08));
 }
+.hero::after{
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;
+  background-image:radial-gradient(rgba(0,74,173,.08) 1.5px, transparent 1.5px);
+  background-size:26px 26px;
+  mask-image:radial-gradient(ellipse at center, #000 0%, transparent 75%);
+}
+.hero-wave{display:block;width:100%;line-height:0;margin-top:-4px}
+.hero-wave svg{width:100%;height:60px;display:block}
 .hero-content{max-width:900px;position:relative;z-index:1}
 .hero-top{color:var(--green);font-size:clamp(1rem,2.6vw,1.3rem);font-weight:600;margin-bottom:16px}
 .hero h1{color:var(--blue);font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.15;margin-bottom:20px}
@@ -320,6 +329,11 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     </div>
   </div>
 </section>
+<div class="hero-wave" aria-hidden="true">
+  <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,32 C300,70 900,-10 1200,32 L1200,60 L0,60 Z" fill="#ffffff"></path>
+  </svg>
+</div>
 
 <!-- ABOUT -->
 <section id="about" class="about alt">
@@ -349,12 +363,11 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
       </div>
     </div>
 
-    <!-- TRIBUTE: replace this with a short paragraph about Velu and a real photo -->
     <div class="tribute">
       <img src="velu-photo.jpg" alt="Velu" width="140" height="140" loading="lazy" onerror="this.style.display='none'">
       <div>
         <h3>In Loving Memory of Velu</h3>
-        <p style="margin:0">Add a short paragraph here about who Velu was and the values that inspired this trust's founding.</p>
+        <p style="margin:0">Velu was a loving father from Vellore who lived for his wife and three children. Even when his health declined, he chose a government hospital to avoid placing a financial burden on his family. He quietly helped poor and homeless people by sharing food and money. He also saved &#8377;1,00,000 for his own final rites, so his family would not have to bear the expense. His life of love, sacrifice, compassion and generosity inspired the founding of Velu Memorial Social Trust.</p>
       </div>
     </div>
 
