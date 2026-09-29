@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Velu Memorial Social Trust">
 <meta property="og:description" content="Building a Kinder, Stronger and More Inclusive Community.">
-<meta property="og:image" content="banner.jpg">
+<meta property="og:image" content="Velu.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -70,8 +70,16 @@ header{position:sticky;top:0;z-index:1000;background:#fff;box-shadow:0 2px 10px 
 .logo-text h2{color:var(--blue);font-size:20px;line-height:1.2}
 .logo-text p{color:var(--green);font-size:12px}
 nav ul{display:flex;list-style:none;gap:18px;flex-wrap:wrap}
-nav a{text-decoration:none;color:var(--blue);font-weight:600;font-size:15px;transition:color .3s}
+nav a{text-decoration:none;color:var(--blue);font-weight:600;font-size:15px;transition:color .3s;position:relative}
 nav a:hover{color:var(--green)}
+nav a.active{color:var(--green)}
+nav a.active::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--green)}
+@media(max-width:768px){nav a.active::after{display:none}nav a.active{background:var(--bg)}}
+
+/* Copy buttons */
+.copy-btn{margin-left:10px;background:var(--bg);border:1px solid var(--line);color:var(--blue);font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;cursor:pointer;font-family:inherit;vertical-align:middle}
+.copy-btn:hover{background:#eef4fb}
+.copy-btn.copied{background:var(--green);color:#fff;border-color:var(--green)}
 .menu-toggle{position:absolute;opacity:0;pointer-events:none}
 .menu-icon{display:none;font-size:28px;color:var(--blue);cursor:pointer;padding:4px 10px;line-height:1}
 .menu-toggle:focus-visible + .menu-icon{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
@@ -82,14 +90,17 @@ nav a:hover{color:var(--green)}
   display:flex;justify-content:center;align-items:center;text-align:center;
   padding:90px 20px;
   position:relative;overflow:hidden;isolation:isolate;
-  background-image:url('banner.jpg');
-  background-size:cover;
-  background-position:center;
+  background:linear-gradient(180deg,#f6fbff,#fff);
 }
-/* Soft white wash over the banner photo so the headline stays readable */
 .hero::after{
-  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
-  background:linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.82) 60%, rgba(255,255,255,.94) 100%);
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;
+  background-image:radial-gradient(rgba(0,74,173,.06) 1.5px, transparent 1.5px);
+  background-size:26px 26px;
+  mask-image:radial-gradient(ellipse at center, #000 0%, transparent 72%);
+}
+.hero-mark{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:min(420px,60vw);height:auto;opacity:.06;pointer-events:none;z-index:-1;
 }
 .hero-wave{display:block;width:100%;line-height:0;margin-top:-4px}
 .hero-wave svg{width:100%;height:60px;display:block}
@@ -177,6 +188,20 @@ nav a:hover{color:var(--green)}
 .lightbox img{max-width:92%;max-height:88vh;border-radius:10px}
 .lightbox span{position:absolute;top:16px;right:22px;color:#fff;font-size:36px;line-height:1}
 
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;max-width:900px;margin:auto}
+.team-card{text-align:center}
+.team-card img{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 14px;display:block;background:#e8eef2}
+.team-card h4{color:var(--blue);font-size:16px;margin-bottom:4px}
+.team-card p{color:var(--muted);font-size:13px}
+
+/* ACTIVITIES */
+.activity-list{max-width:800px;margin:auto;display:flex;flex-direction:column;gap:16px}
+.activity-item{display:flex;gap:18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;align-items:flex-start}
+.activity-date{flex-shrink:0;background:var(--bg);color:var(--blue);font-weight:700;font-size:13px;border-radius:8px;padding:8px 12px;text-align:center;min-width:78px}
+.activity-item h4{color:var(--blue);font-size:16px;margin-bottom:4px}
+.activity-item p{color:var(--muted);font-size:14px;line-height:1.6}
+
 /* GET INVOLVED */
 .involve-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}
 .involve-card{background:#fff;border-radius:15px;padding:32px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
@@ -241,9 +266,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
   nav ul{flex-direction:column;gap:0}
   nav a{display:block;padding:15px 20px;border-top:1px solid var(--line)}
   .menu-toggle:checked ~ nav{display:block}
-  .banner-section{padding:10px 10px 0}
-  .banner-container{border-radius:10px}
-  .hero{padding:60px 20px;min-height:50vh}
+  .hero{padding:60px 20px;min-height:55vh}
   section{padding:56px 20px}
   .gallery{grid-template-columns:repeat(2,1fr);gap:10px}
   .gallery img{height:180px}
@@ -291,6 +314,8 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
         <li><a href="#vision-mission">Vision &amp; Mission</a></li>
         <li><a href="#focus">Our Focus</a></li>
         <li><a href="#values">Our Values</a></li>
+        <li><a href="#team">Trustees</a></li>
+        <li><a href="#activities">Activities</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#join">Join Us</a></li>
         <li><a href="#support">Support Us</a></li>
@@ -304,6 +329,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
 
 <!-- HERO -->
 <section class="hero" id="top">
+  <img class="hero-mark" src="Velu.png" alt="" aria-hidden="true" loading="lazy">
   <div class="hero-content">
     <div class="hero-top">Together for a Better Tomorrow</div>
     <h1>Building a Kinder, Stronger and More Inclusive Community</h1>
@@ -466,6 +492,49 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
   </div>
 </section>
 
+<!-- TRUSTEES / TEAM -->
+<section id="team">
+  <div class="container">
+    <p class="eyebrow">Who Runs This Trust</p>
+    <h2 class="section-title">Our Trustees</h2>
+    <p class="section-sub">Velu Memorial Social Trust is run by a small group of people committed to transparency and meaningful action.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="madhankumar.jpg" alt="Madhankumar V" loading="lazy" onerror="this.style.visibility='hidden'">
+        <h4>Madhankumar V</h4>
+        <p>Founding Trustee</p>
+      </div>
+      <!-- Add more trustees below in the same format -->
+      <!--
+      <div class="team-card">
+        <img src="name.jpg" alt="Full Name" loading="lazy" onerror="this.style.visibility='hidden'">
+        <h4>Full Name</h4>
+        <p>Role / Trustee</p>
+      </div>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- RECENT ACTIVITIES -->
+<section id="activities" class="alt">
+  <div class="container">
+    <p class="eyebrow">What We've Been Doing</p>
+    <h2 class="section-title">Recent Activities</h2>
+    <p class="section-sub">A running record of what the trust has been doing. We'll keep this updated as our work grows.</p>
+    <div class="activity-list">
+      <!-- Replace with real dated entries as activities happen -->
+      <div class="activity-item">
+        <div class="activity-date">Oct 2025</div>
+        <div>
+          <h4>Trust journey begins</h4>
+          <p>Velu Memorial Social Trust starts its journey with a small group of volunteers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- GALLERY -->
 <section id="gallery">
   <div class="container">
@@ -537,6 +606,9 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     <div class="notice">
       <strong>Current status:</strong> We are currently building the foundation of Velu Memorial Social Trust. Until the Trust's formal registration and applicable tax approvals are completed, no tax deduction benefit is being claimed for contributions.
     </div>
+    <p class="section-sub" style="margin-top:-14px">
+      Contributions currently go directly toward community activities such as food and basic support for those in need. As the Trust formalises its structure, we will publish clearer, itemised updates here on how funds are used.
+    </p>
 
     <div class="support-box">
       <h3 style="color:var(--blue);margin-bottom:10px">UPI Support</h3>
@@ -544,7 +616,10 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
       <p style="margin-top:18px">UPI ID: <span class="upi-id">8838037689@sbi</span></p>
       <p>Account Name: <strong>Madhankumar V</strong></p>
       <a class="btn btn-green" style="margin-top:20px" href="upi://pay?pa=8838037689@sbi&amp;pn=Madhankumar%20V&amp;cu=INR">Pay via UPI App (mobile)</a>
-      <p style="font-size:14px;margin-top:14px">On a computer? Pay to this UPI ID from any UPI app.</p>
+      <p style="font-size:14px;margin-top:14px">On a computer? Scan the QR code or pay to the UPI ID above from any UPI app.</p>
+      <img src="upi-qr.png" alt="UPI QR code for Velu Memorial Social Trust" width="180" height="180"
+           style="margin:16px auto 0;border-radius:10px;border:1px solid var(--line);display:block"
+           loading="lazy" onerror="this.style.display='none'">
       <p class="security-note">&#128274; Never share your UPI PIN or OTP with anyone.</p>
     </div>
 
@@ -590,8 +665,12 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
 
     <div class="contact-grid">
       <div class="contact-info">
-        <p>&#128222; <a class="link" href="tel:+918838037689">+91 8838037689</a></p>
-        <p>&#128231; <a class="link" href="mailto:velumemorialsocialtrust@gmail.com">velumemorialsocialtrust@gmail.com</a></p>
+        <p>&#128222; <a class="link" href="tel:+918838037689">+91 8838037689</a>
+          <button type="button" class="copy-btn" data-copy="+91 8838037689" aria-label="Copy phone number">Copy</button>
+        </p>
+        <p>&#128231; <a class="link" href="mailto:velumemorialsocialtrust@gmail.com">velumemorialsocialtrust@gmail.com</a>
+          <button type="button" class="copy-btn" data-copy="velumemorialsocialtrust@gmail.com" aria-label="Copy email address">Copy</button>
+        </p>
         <p>&#128205; Tamil Nadu, India</p>
         <a class="btn btn-green" href="https://wa.me/918838037689" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp
@@ -650,6 +729,8 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
         <li><a href="#vision-mission">Vision &amp; Mission</a></li>
         <li><a href="#focus">Our Focus</a></li>
         <li><a href="#values">Our Values</a></li>
+        <li><a href="#team">Trustees</a></li>
+        <li><a href="#activities">Activities</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#join">Join Us</a></li>
         <li><a href="#support">Support Us</a></li>
@@ -675,6 +756,44 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
   </div>
   <div class="footer-bottom">&copy; 2026 Velu Memorial Social Trust. All Rights Reserved.</div>
 </footer>
+
+<script>
+// Copy phone/email to clipboard
+document.querySelectorAll('.copy-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var text = btn.getAttribute('data-copy');
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(showCopied);
+    } else {
+      var ta=document.createElement('textarea');
+      ta.value=text; document.body.appendChild(ta); ta.select();
+      try{document.execCommand('copy');}catch(e){}
+      document.body.removeChild(ta); showCopied();
+    }
+    function showCopied(){
+      var original = btn.textContent;
+      btn.textContent = 'Copied!'; btn.classList.add('copied');
+      setTimeout(function(){ btn.textContent = original; btn.classList.remove('copied'); }, 1800);
+    }
+  });
+});
+
+// Highlight the current section's nav link while scrolling
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav a[href^="#"]'));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  if(!sections.length) return;
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var id = '#' + entry.target.id;
+        links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === id); });
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+  sections.forEach(function(s){ observer.observe(s); });
+})();
+</script>
 
 <div class="float-btns">
   <a class="fb-whatsapp" href="https://wa.me/918838037689" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
