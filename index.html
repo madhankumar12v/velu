@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Velu Memorial Social Trust">
 <meta property="og:description" content="Building a Kinder, Stronger and More Inclusive Community.">
-<meta property="og:image" content="banner.jpg">
+<meta property="og:image" content="Velu.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -76,14 +76,24 @@ nav a:hover{color:var(--green)}
 .menu-icon{display:none;font-size:28px;color:var(--blue);cursor:pointer;padding:4px 10px;line-height:1}
 .menu-toggle:focus-visible + .menu-icon{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
 
-/* BANNER */
-.banner-section{background:#fff;padding:20px 20px 0}
-.banner-container{max-width:1200px;margin:auto;overflow:hidden;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,.10);background:#e8eef2}
-.banner-container img{width:100%;aspect-ratio:6/3;object-fit:cover;display:block}
-
 /* HERO */
-.hero{min-height:60vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:70px 20px;background:linear-gradient(#f6fbff,#fff)}
-.hero-content{max-width:900px}
+.hero{
+  min-height:72vh;
+  display:flex;justify-content:center;align-items:center;text-align:center;
+  padding:90px 20px;
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(40,163,106,.08) 0, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(0,74,173,.07) 0, transparent 45%),
+    linear-gradient(#f6fbff,#fff);
+}
+.hero::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(0,74,173,.06) 1.5px, transparent 1.5px);
+  background-size:26px 26px;
+  mask-image:radial-gradient(ellipse at center, #000 0%, transparent 72%);
+}
+.hero-content{max-width:900px;position:relative;z-index:1}
 .hero-top{color:var(--green);font-size:clamp(1rem,2.6vw,1.3rem);font-weight:600;margin-bottom:16px}
 .hero h1{color:var(--blue);font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.15;margin-bottom:20px}
 .hero p{font-size:clamp(1.05rem,2.3vw,1.25rem);color:var(--muted);max-width:700px;margin:0 auto}
@@ -245,6 +255,17 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
   .gallery{grid-template-columns:1fr}
   .gallery img{height:230px}
 }
+/* FLOATING BUTTONS */
+.float-btns{position:fixed;right:18px;bottom:18px;z-index:1500;display:flex;flex-direction:column;gap:12px;
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+.float-btns a{
+  width:52px;height:52px;border-radius:50%;display:flex;justify-content:center;align-items:center;
+  color:#fff;text-decoration:none;font-size:22px;box-shadow:0 6px 16px rgba(0,0,0,.22);transition:.25s
+}
+.float-btns a:hover{transform:translateY(-3px) scale(1.06)}
+.fb-whatsapp{background:#25D366}
+.fb-top{background:var(--blue);font-size:18px}
+
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -281,14 +302,8 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
 
 <main id="main">
 
-<div class="banner-section" id="top">
-  <div class="banner-container">
-    <img src="banner.jpg" alt="Velu Memorial Social Trust banner" width="1200" height="600">
-  </div>
-</div>
-
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="top">
   <div class="hero-content">
     <div class="hero-top">Together for a Better Tomorrow</div>
     <h1>Building a Kinder, Stronger and More Inclusive Community</h1>
@@ -656,6 +671,11 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
   </div>
   <div class="footer-bottom">&copy; 2026 Velu Memorial Social Trust. All Rights Reserved.</div>
 </footer>
+
+<div class="float-btns">
+  <a class="fb-whatsapp" href="https://wa.me/918838037689" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <a class="fb-top" href="#top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+</div>
 
 </body>
 </html>
