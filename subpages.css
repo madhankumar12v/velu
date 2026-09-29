@@ -70,3 +70,17 @@ nav a{display:block;padding:15px 20px;border-top:1px solid var(--line)}
 .cert h4{color:var(--blue);font-size:16px;margin-bottom:4px}
 .cert .d{color:var(--green);font-weight:700;font-size:12px;text-transform:uppercase}
 .cert p{color:var(--muted);font-size:14px;line-height:1.6;margin-top:6px}
+
+/* DROPDOWN NAV */
+nav li{position:relative}
+nav li.has>a span{font-size:11px;margin-left:3px}
+nav ul.dd{display:none;position:absolute;top:100%;left:-10px;background:#fff;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.12);min-width:210px;padding:8px 0;flex-direction:column;gap:0;z-index:1100;flex-wrap:nowrap}
+nav li.has:hover>ul.dd,nav li.has:focus-within>ul.dd{display:flex}
+nav ul.dd a{display:block;padding:9px 18px;white-space:nowrap;font-size:14px}
+nav ul.dd a.active::after{display:none}
+.gov{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:900px;margin:auto}
+.gov-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center}
+.gov-card h4{color:var(--blue);font-size:18px;margin-bottom:4px}
+.gov-card .role{color:var(--green);font-weight:600;font-size:14px;margin-bottom:8px}
+.gov-card p{color:var(--muted);font-size:14px;line-height:1.6}
+@media(max-width:768px){nav li.has:hover>ul.dd,nav ul.dd{display:block;position:static;box-shadow:none;padding:0;min-width:0}nav ul.dd a{padding-left:38px;font-weight:500;font-size:14px;white-space:normal}}
