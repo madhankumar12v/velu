@@ -282,6 +282,21 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
   .gallery{grid-template-columns:1fr}
   .gallery img{height:230px}
 }
+
+/* DROPDOWN NAV */
+nav li{position:relative}
+nav li.has>a span{font-size:11px;margin-left:3px}
+nav ul.dd{display:none;position:absolute;top:100%;left:-10px;background:#fff;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.12);min-width:210px;padding:8px 0;flex-direction:column;gap:0;z-index:1100;flex-wrap:nowrap}
+nav li.has:hover>ul.dd,nav li.has:focus-within>ul.dd{display:flex}
+nav ul.dd a{display:block;padding:9px 18px;white-space:nowrap;font-size:14px}
+nav ul.dd a.active::after{display:none}
+.gov{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:900px;margin:auto}
+.gov-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center}
+.gov-card h4{color:var(--blue);font-size:18px;margin-bottom:4px}
+.gov-card .role{color:var(--green);font-weight:600;font-size:14px;margin-bottom:8px}
+.gov-card p{color:var(--muted);font-size:14px;line-height:1.6}
+@media(max-width:768px){nav li.has:hover>ul.dd,nav ul.dd{display:block;position:static;box-shadow:none;padding:0;min-width:0}nav ul.dd a{padding-left:38px;font-weight:500;font-size:14px;white-space:normal}}
+
 /* FLOATING BUTTONS */
 .float-btns{position:fixed;right:18px;bottom:18px;z-index:1500;display:flex;flex-direction:column;gap:12px;
   padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -311,24 +326,15 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     </a>
     <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
     <label for="menu-toggle" class="menu-icon" aria-hidden="true">&#9776;</label>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="#top">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#vision-mission">Vision &amp; Mission</a></li>
-        <li><a href="#focus">Our Focus</a></li>
-        <li><a href="#values">Our Values</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="activity-reports.html">Activity Reports</a></li>
-        <li><a href="impact.html">Our Impact</a></li>
-        <li><a href="transparency.html">Transparency</a></li>
-        <li><a href="updates.html">Updates</a></li>
-        <li><a href="recognition.html">Recognition</a></li>
-        <li><a href="#join">Join Us</a></li>
-        <li><a href="#support">Support Us</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <nav aria-label="Main"><ul>
+<li><a href="#top">Home</a></li>
+<li class="has"><a href="#about">About <span aria-hidden="true">&#9662;</span></a><ul class="dd"><li><a href="#about">Our Story</a></li><li><a href="#vision-mission">Vision &amp; Mission</a></li><li><a href="#values">Our Values</a></li><li><a href="#governance">Governance</a></li><li><a href="#roadmap">Roadmap</a></li></ul></li>
+<li class="has"><a href="#focus">Our Work <span aria-hidden="true">&#9662;</span></a><ul class="dd"><li><a href="#focus">Our Focus</a></li><li><a href="activity-reports.html">Activity Reports</a></li><li><a href="#gallery">Gallery</a></li><li><a href="updates.html">Updates</a></li></ul></li>
+<li class="has"><a href="impact.html">Impact <span aria-hidden="true">&#9662;</span></a><ul class="dd"><li><a href="impact.html">Our Impact</a></li><li><a href="transparency.html">Transparency</a></li><li><a href="recognition.html">Recognition</a></li></ul></li>
+<li><a href="#join">Get Involved</a></li>
+<li><a href="#support">Support</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav>
   </div>
 </header>
 
@@ -391,7 +397,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
       <img src="velu-photo.jpg" alt="Velu" width="140" height="140" loading="lazy" onerror="this.style.display='none'">
       <div>
         <h3>In Loving Memory of Velu</h3>
-        <p style="margin:0">Velu was a loving father from Vellore who lived for his wife and three children. Even when his health declined, he chose a government hospital to avoid placing a financial burden on his family. He quietly helped poor and homeless people by sharing food and money. He also saved &#8377;1,00,000 for his own final rites, so his family would not have to bear the expense. His life of love, sacrifice, compassion and generosity inspired the founding of Velu Memorial Social Trust.</p>
+        <p style="margin:0">Velu was a loving father from Vellore who lived for his wife and three children. Even when his health declined, he chose a government hospital to avoid placing a financial burden on his family. He quietly supported people who were in need by sharing food and financial help. He also saved &#8377;1,00,000 for his own final rites, so his family would not have to bear the expense. His life of love, sacrifice, compassion and generosity inspired the founding of Velu Memorial Social Trust.</p>
       </div>
     </div>
 
@@ -490,8 +496,8 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-date">21 October 2025</div>
-        <h4>The Journey Begins</h4>
-        <p>The idea of Velu Memorial Social Trust begins with a commitment to meaningful social contribution.</p>
+        <h4>The Beginning of Our Journey</h4>
+        <p>On 21 October 2025, we began our journey with a commitment to meaningful social contribution, inspired by the values of compassion, responsibility and community.</p>
       </div>
       <div class="tl-item">
         <div class="tl-date">2026</div>
@@ -509,6 +515,38 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
         <p>Building sustainable initiatives and opportunities to reach more communities.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="container">
+    <p class="eyebrow">Where We Are Heading</p>
+    <h2 class="section-title" style="margin-bottom:12px">Our Roadmap</h2>
+    <p class="section-sub">This is a planned direction, not a promise of dates. We will update it as we grow.</p>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-date">2025</div><h4>Journey Begins</h4><p>We began our journey with a commitment to meaningful social contribution.</p></div>
+      <div class="tl-item"><div class="tl-date">2026</div><h4>Building the Foundation</h4><p>Activities &bull; Documentation &bull; Community Connections</p></div>
+      <div class="tl-item"><div class="tl-date">Next Stage</div><h4>Formalising the Organisation</h4><p>Registration &bull; Governance &bull; Compliance</p></div>
+      <div class="tl-item"><div class="tl-date">Future</div><h4>Growing Together</h4><p>Volunteers &bull; Partnerships &bull; Sustainable Initiatives</p></div>
+      <div class="tl-item"><div class="tl-date">Long Term</div><h4>Greater Community Impact</h4><p>Reaching more communities in a responsible and sustainable way.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GOVERNANCE -->
+<section id="governance" class="alt">
+  <div class="container">
+    <p class="eyebrow">Who Is Responsible</p>
+    <h2 class="section-title">Our Governance</h2>
+    <div class="gov">
+      <div class="gov-card"><h4>Madhankumar V</h4><div class="role">Founder &amp; Managing Trustee</div><p>Overall leadership, administration and coordination.</p></div>
+      <!-- Add other people ONLY after confirming their names, titles and consent to be shown publicly.
+      <div class="gov-card"><h4>Name</h4><div class="role">Trustee &ndash; Social Activities</div><p>Community activities, beneficiaries and volunteer coordination.</p></div>
+      <div class="gov-card"><h4>Name</h4><div class="role">Trustee &ndash; Accounts &amp; Documentation</div><p>Financial records, documentation and supporting records.</p></div>
+      -->
+    </div>
+    <p class="vm-note">We aim to maintain clear responsibilities, proper documentation and responsible use of resources as the organisation develops.</p>
   </div>
 </section>
 
@@ -538,8 +576,8 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
       <div class="activity-item">
         <div class="activity-date">Oct 2025</div>
         <div>
-          <h4>Trust journey begins</h4>
-          <p>Velu Memorial Social Trust starts its journey with a small group of volunteers.</p>
+          <h4>Our journey begins</h4>
+          <p>We begin our journey with a small group of volunteers.</p>
         </div>
       </div>
     </div>
@@ -620,7 +658,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     <p class="section-sub">Our journey is built on people who believe that small actions can create meaningful change.</p>
 
     <div class="notice">
-      <strong>Current status:</strong> We are currently building the foundation of Velu Memorial Social Trust. Until the Trust's formal registration and applicable tax approvals are completed, no tax deduction benefit is being claimed for contributions.
+      <strong>Current status:</strong> We are currently building the foundation of Velu Memorial Social Trust. No tax deduction benefit is currently being offered or claimed for contributions. Applicable tax approvals will be updated here once obtained.
     </div>
     <p class="section-sub" style="margin-top:-14px">
       Contributions currently go directly toward community activities such as food and basic support for those in need. See exactly how funds are used on our <a href="activity-reports.html" style="color:var(--blue);font-weight:600">Activity Reports</a> page.
@@ -629,6 +667,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     <div class="support-box">
       <h3 style="color:var(--blue);margin-bottom:10px">UPI Support</h3>
       <p>If you choose to support our current social activities, please verify the payment details carefully before making any payment.</p>
+      <div class="notice" style="margin:18px 0 0;text-align:left"><strong>Current contribution method &ndash; founder-managed during the foundation stage.</strong> This is currently a personal UPI account used for the initiative while formal Trust banking arrangements are being established.</div>
       <p style="margin-top:18px">UPI ID: <span class="upi-id">8838037689@sbi</span></p>
       <p>Account Name: <strong>Madhankumar V</strong></p>
       <a class="btn btn-green" style="margin-top:20px" href="upi://pay?pa=8838037689@sbi&amp;pn=Madhankumar%20V&amp;cu=INR">Pay via UPI App (mobile)</a>
@@ -642,7 +681,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     <div class="faq">
       <details>
         <summary>Is this Trust registered?</summary>
-        <p>Velu Memorial Social Trust is currently building its foundation. We will update this page with our registration details as soon as registration is complete.</p>
+        <p>Not yet. Our initiative is in its foundation stage and is working towards formal Trust registration. We will publish registration details here once completed.</p>
       </details>
       <details>
         <summary>Where does my contribution go?</summary>
@@ -650,7 +689,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
       </details>
       <details>
         <summary>Will I get a tax receipt?</summary>
-        <p>Not at present. No tax deduction benefit is being claimed until the Trust's registration and applicable approvals (such as 80G) are in place.</p>
+        <p>No. No tax deduction benefit is currently being offered or claimed for contributions. Applicable tax approvals will be updated here once obtained.</p>
       </details>
       <details>
         <summary>How can I reach someone directly?</summary>
@@ -661,6 +700,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
 </section>
 
 <!-- TESTIMONIALS -->
+<!-- Hidden until genuine testimonials are available. Restore this section then.
 <section id="testimonials" class="alt">
   <div class="container">
     <p class="eyebrow">Community Voices</p>
@@ -671,6 +711,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     </div>
   </div>
 </section>
+-->
 
 <!-- CONTACT -->
 <section id="contact">
@@ -745,6 +786,8 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
         <li><a href="#vision-mission">Vision &amp; Mission</a></li>
         <li><a href="#focus">Our Focus</a></li>
         <li><a href="#values">Our Values</a></li>
+        <li><a href="#governance">Governance</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="#activities">Activities</a></li>
         <li><a href="activity-reports.html">Activity Reports</a></li>
         <li><a href="impact.html">Our Impact</a></li>
