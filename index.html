@@ -196,6 +196,16 @@ nav a.active::after{content:'';position:absolute;left:0;right:0;bottom:-6px;heig
 .activity-item p{color:var(--muted);font-size:14px;line-height:1.6}
 .activity-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:30px}
 
+/* FOUNDER + MILESTONES */
+.founder{max-width:760px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:15px;padding:36px;text-align:center}
+.founder blockquote{color:var(--muted);font-size:17px;line-height:1.9;font-style:italic}
+.founder cite{display:block;margin-top:16px;color:var(--blue);font-weight:600;font-style:normal;font-size:15px}
+.milestones{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:900px;margin:auto}
+.ms{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center}
+.ms i{font-size:26px;color:var(--green-bright);margin-bottom:10px}
+.ms h4{color:var(--blue);font-size:16px;margin-bottom:6px}
+.ms p{color:var(--muted);font-size:14px;line-height:1.6}
+
 /* GET INVOLVED */
 .involve-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px}
 .involve-card{background:#fff;border-radius:15px;padding:32px;box-shadow:0 8px 20px rgba(0,0,0,.06)}
@@ -311,6 +321,9 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="activity-reports.html">Activity Reports</a></li>
         <li><a href="impact.html">Our Impact</a></li>
+        <li><a href="transparency.html">Transparency</a></li>
+        <li><a href="updates.html">Updates</a></li>
+        <li><a href="recognition.html">Recognition</a></li>
         <li><a href="#join">Join Us</a></li>
         <li><a href="#support">Support Us</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -385,6 +398,19 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:28px">
       Led by <strong>Madhankumar V</strong> and a small group of volunteers committed to building this initiative responsibly and transparently.
     </p>
+  </div>
+</section>
+
+<!-- FOUNDER'S MESSAGE -->
+<section id="founder" class="alt">
+  <div class="container">
+    <p class="eyebrow">A Note From Us</p>
+    <h2 class="section-title">Founder's Message</h2>
+    <div class="founder">
+      <!-- DRAFT wording: Madhankumar V, please edit or approve before publishing. -->
+      <blockquote>&ldquo;Velu Memorial Social Trust started as a small effort inspired by values of compassion, responsibility and service. We believe meaningful change begins with simple actions.&rdquo;</blockquote>
+      <cite>&mdash; Madhankumar V, Velu Memorial Social Trust</cite>
+    </div>
   </div>
 </section>
 
@@ -486,6 +512,21 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
   </div>
 </section>
 
+<!-- RECOGNITION & MILESTONES -->
+<section id="milestones">
+  <div class="container">
+    <p class="eyebrow">Our Milestones</p>
+    <h2 class="section-title">Recognition &amp; Milestones</h2>
+    <p class="section-sub">Milestones we have reached, and a place to show certificates, awards and appreciation letters when we receive them.</p>
+    <div class="milestones">
+      <div class="ms"><i class="fa-solid fa-flag" aria-hidden="true"></i><h4>21 October 2025</h4><p>Velu Memorial Social Trust begins its journey.</p></div>
+      <div class="ms"><i class="fa-solid fa-award" aria-hidden="true"></i><h4>Certificates &amp; Awards</h4><p>Will be shown here when received.</p></div>
+      <div class="ms"><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i><h4>Appreciation Letters</h4><p>Will be shown here with the sender's permission.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:30px"><a href="recognition.html" class="btn">View Recognition &amp; Milestones &rarr;</a></div>
+  </div>
+</section>
+
 <!-- RECENT ACTIVITIES -->
 <section id="activities" class="alt">
   <div class="container">
@@ -505,6 +546,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
     <div class="activity-cta">
       <a href="activity-reports.html" class="btn">View All Activity Reports &rarr;</a>
       <a href="impact.html" class="btn btn-outline">See Our Impact 2026</a>
+      <a href="updates.html" class="btn btn-outline">Upcoming &amp; News</a>
     </div>
   </div>
 </section>
@@ -604,7 +646,7 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
       </details>
       <details>
         <summary>Where does my contribution go?</summary>
-        <p>Contributions support our current community activities. Every activity, with photos, number of people helped and expenses, is published on our <a class="link" href="activity-reports.html" style="color:var(--blue)">Activity Reports</a> page, and yearly totals are on the <a class="link" href="impact.html" style="color:var(--blue)">Our Impact</a> page.</p>
+        <p>Contributions support our current community activities. Every activity, with photos, number of people helped and expenses, is published on our <a class="link" href="activity-reports.html" style="color:var(--blue)">Activity Reports</a> page, and yearly totals are on the <a class="link" href="impact.html" style="color:var(--blue)">Our Impact</a> page. See also our <a class="link" href="transparency.html" style="color:var(--blue)">Transparency</a> page.</p>
       </details>
       <details>
         <summary>Will I get a tax receipt?</summary>
@@ -706,6 +748,9 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
         <li><a href="#activities">Activities</a></li>
         <li><a href="activity-reports.html">Activity Reports</a></li>
         <li><a href="impact.html">Our Impact</a></li>
+        <li><a href="transparency.html">Transparency</a></li>
+        <li><a href="updates.html">Upcoming &amp; News</a></li>
+        <li><a href="recognition.html">Recognition</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#join">Join Us</a></li>
         <li><a href="#support">Support Us</a></li>
