@@ -16,6 +16,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Velu Memorial Social Trust",
+  "description": "Building a compassionate, united and stronger community through meaningful action.",
+  "email": "velumemorialsocialtrust@gmail.com",
+  "telephone": "+91-8838037689",
+  "address": {"@type": "PostalAddress", "addressRegion": "Tamil Nadu", "addressCountry": "IN"},
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61582258115325",
+    "https://www.instagram.com/velumemorialsocialtrust/",
+    "https://youtube.com/@velumemorialsocialtrust"
+  ]
+}
+</script>
+
 <style>
 :root{
   --blue:#004aad;
@@ -87,6 +104,22 @@ nav a:hover{color:var(--green)}
 
 /* ABOUT */
 .about p{text-align:center;max-width:800px;margin:0 auto 16px;line-height:1.9;color:var(--muted)}
+
+/* TRIBUTE */
+.tribute{max-width:700px;margin:40px auto 0;background:#fff;border:1px solid var(--line);border-radius:15px;padding:28px;display:flex;gap:22px;align-items:center;flex-wrap:wrap;text-align:left}
+.tribute img{width:110px;height:110px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.tribute h3{color:var(--blue);font-size:19px;margin-bottom:8px}
+.tribute p{color:var(--muted);line-height:1.7}
+@media(max-width:480px){.tribute{justify-content:center;text-align:center}}
+
+/* FAQ */
+.faq{max-width:800px;margin:36px auto 0}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin-bottom:12px}
+.faq summary{cursor:pointer;font-weight:600;color:var(--blue);list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+';float:right;color:var(--green);font-size:20px}
+.faq details[open] summary::after{content:'\2212'}
+.faq p{color:var(--muted);margin-top:10px;line-height:1.7;font-size:15px}
 
 /* CARDS */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
@@ -300,6 +333,19 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
         <p>Turning meaningful actions into positive community outcomes.</p>
       </div>
     </div>
+
+    <!-- TRIBUTE: replace this with a short paragraph about Velu and a real photo -->
+    <div class="tribute">
+      <img src="velu-photo.jpg" alt="Velu" width="140" height="140" loading="lazy" onerror="this.style.display='none'">
+      <div>
+        <h3>In Loving Memory of Velu</h3>
+        <p style="margin:0">Add a short paragraph here about who Velu was and the values that inspired this trust's founding.</p>
+      </div>
+    </div>
+
+    <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:28px">
+      Led by <strong>Madhankumar V</strong> and a small group of volunteers committed to building this initiative responsibly and transparently.
+    </p>
   </div>
 </section>
 
@@ -482,6 +528,25 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
       <p style="font-size:14px;margin-top:14px">On a computer? Pay to this UPI ID from any UPI app.</p>
       <p class="security-note">&#128274; Never share your UPI PIN or OTP with anyone.</p>
     </div>
+
+    <div class="faq">
+      <details>
+        <summary>Is this Trust registered?</summary>
+        <p>Velu Memorial Social Trust is currently building its foundation. We will update this page with our registration details as soon as registration is complete.</p>
+      </details>
+      <details>
+        <summary>Where does my contribution go?</summary>
+        <p>Contributions support our current community activities. As we formalise our structure, we will publish clearer, itemised updates on how funds are used.</p>
+      </details>
+      <details>
+        <summary>Will I get a tax receipt?</summary>
+        <p>Not at present. No tax deduction benefit is being claimed until the Trust's registration and applicable approvals (such as 80G) are in place.</p>
+      </details>
+      <details>
+        <summary>How can I reach someone directly?</summary>
+        <p>Call or WhatsApp <a class="link" href="tel:+918838037689">+91 8838037689</a>, or use the <a class="link" href="#contact">contact form</a> below.</p>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -519,10 +584,9 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
         </div>
       </div>
 
-      <form action="https://formsubmit.co/velumemorialsocialtrust@gmail.com" method="POST">
+      <form action="https://formspree.io/f/xaenjybn" method="POST">
         <input type="hidden" name="_subject" value="New enquiry - Velu Memorial Social Trust">
-        <input type="hidden" name="_template" value="table">
-        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <label class="field" for="name">Full Name *</label>
         <input type="text" id="name" name="name" autocomplete="name" required>
@@ -531,10 +595,10 @@ footer{background:var(--blue-dark);color:#fff;padding:50px 20px 30px}
         <input type="tel" id="phone" name="phone" autocomplete="tel" required>
 
         <label class="field" for="email">Email Address</label>
-        <input type="email" id="email" name="email" autocomplete="email">
+        <input type="email" id="email" name="_replyto" autocomplete="email">
 
         <label class="field" for="interest">I am interested in</label>
-        <select id="interest" name="I am interested in">
+        <select id="interest" name="Interested in">
           <option>Volunteering</option>
           <option>Community Support</option>
           <option>General Enquiry</option>
